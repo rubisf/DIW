@@ -2,6 +2,8 @@
 
 Bienvenido/a al repositorio centralizado para el módulo de **Desarrollo de Interfaces Web**.
 
+🌐 **¡Sitio en vivo!** Todo el contenido, los ejercicios y el panel de control interactivo están desplegados y accesibles públicamente aquí: **[https://diw-ies-comercio.vercel.app/](https://diw-ies-comercio.vercel.app/)**
+
 Este proyecto aloja un conjunto completo de recursos, materiales teóricos y, especialmente, ejercicios prácticos que cubren todo el espectro del desarrollo frontend moderno.
 
 ## 🗂️ Estructura del Repositorio
