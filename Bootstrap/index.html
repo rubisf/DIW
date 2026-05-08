@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -14,20 +14,40 @@
         }
 
         .sidebar {
-            min-height: 100vh;
-            position: sticky;
-            top: 0;
             overflow-y: auto;
             background: white;
-            border-right: 1px solid #dee2e6;
+            z-index: 1000;
         }
 
         .iframe-container {
-            height: calc(100vh - 120px);
             width: 100%;
             border: 1px solid #dee2e6;
             border-radius: 8px;
             background: white;
+        }
+
+        @media (min-width: 768px) {
+            .sidebar {
+                height: 100vh;
+                position: sticky;
+                top: 0;
+                border-right: 1px solid #dee2e6;
+            }
+            .iframe-container {
+                height: calc(100vh - 120px);
+            }
+        }
+        
+        @media (max-width: 767.98px) {
+            .sidebar {
+                position: relative;
+                max-height: 35vh;
+                border-right: none;
+                border-bottom: 2px solid #dee2e6;
+            }
+            .iframe-container {
+                height: 60vh;
+            }
         }
 
         iframe {
@@ -244,6 +264,11 @@
             // Actualizar UI
             document.getElementById('currentTitle').innerText = element.innerText;
             document.getElementById('extLink').href = url;
+
+            // En móviles, hacer scroll hacia el iframe
+            if(window.innerWidth < 768) {
+                document.getElementById('currentTitle').scrollIntoView({ behavior: 'smooth' });
+            }
         }
     </script>
 </body>
