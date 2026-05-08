@@ -1,6 +1,7 @@
 # Scripts de automatización y herramientas
 *.ps1
 *.py
+*.pdf
 
 # Archivos de datos generados o temporales
 *.json
