@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolución de Ejercicios - HTML Semántico</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar Native HTML/CSS */
+        .sidebar {
+            width: 280px;
+            min-width: 280px;
+            background: white;
+            border-right: 1px solid #dee2e6;
+            overflow-y: auto;
+            padding: 20px 10px;
+            box-sizing: border-box;
+        }
+
+        .navbar-brand {
+            font-size: 1.25rem;
+            font-weight: bold;
+            padding: 10px;
+            color: #e34f26;
+            display: block;
+            border-bottom: 2px solid #e34f26;
+            margin-bottom: 15px;
+        }
+
+        .theme-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #6c757d;
+            font-weight: bold;
+            margin: 15px 0 5px 10px;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 8px 15px;
+            color: #495057;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-bottom: 2px;
+            font-size: 14px;
+            background: transparent;
+            border: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .nav-link:hover {
+            background-color: #e9ecef;
+        }
+
+        .nav-link.active {
+            background-color: #e34f26;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Main View */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+            background: #f8f9fa;
+        }
+
+        .header-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .header-bar h3 {
+            margin: 0;
+            color: #212529;
+        }
+
+        .btn-link {
+            display: inline-block;
+            padding: 6px 12px;
+            font-size: 14px;
+            color: #e34f26;
+            border: 1px solid #e34f26;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: 0.2s;
+            background: white;
+        }
+
+        .btn-link:hover {
+            background: #e34f26;
+            color: white;
+        }
+
+        .iframe-container {
+            flex: 1;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            background: white;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="navbar-brand">Ejercicios HTML5</div>
+
+            <div class="theme-title">Tema 1: Intro</div>
+            <button class="nav-link active" data-url="Tema1_Intro/Ej1_Basico/index.html" onclick="loadIframe(this)">1.1
+                Básico</button>
+            <button class="nav-link" data-url="Tema1_Intro/Ej2_Estructura/index.html" onclick="loadIframe(this)">1.2
+                Estructura</button>
+            <button class="nav-link" data-url="Tema1_Intro/Ej3_BlogBasico/index.html" onclick="loadIframe(this)">1.3
+                Blog Estructural</button>
+            <button class="nav-link" data-url="Tema1_Intro/Ej4_BlogTecnico/index.html" onclick="loadIframe(this)">1.4
+                Blog Tecnológico</button>
+
+            <div class="theme-title">Tema 2: Texto</div>
+            <button class="nav-link" data-url="Tema2_Texto/Ej1_Indice/index.html" onclick="loadIframe(this)">2.1
+                Índice</button>
+            <button class="nav-link" data-url="Tema2_Texto/Ej2_Articulo/index.html" onclick="loadIframe(this)">2.2
+                Artículo Técnico</button>
+            <button class="nav-link" data-url="Tema2_Texto/Ej3_Tutorial/index.html" onclick="loadIframe(this)">2.3
+                Tutorial (Pre)</button>
+            <button class="nav-link" data-url="Tema2_Texto/Ej4_Manual/index.html" onclick="loadIframe(this)">2.4
+                Manual</button>
+            <button class="nav-link" data-url="Tema2_Texto/Ej5_BlogAvanzado/index.html" onclick="loadIframe(this)">2.5
+                Blog Avanzado</button>
+
+            <div class="theme-title">Tema 3: Enlaces e Img</div>
+            <button class="nav-link" data-url="Tema3_EnlacesImg/Ej1_Menu/index.html" onclick="loadIframe(this)">3.1
+                Menú Navegación</button>
+            <button class="nav-link" data-url="Tema3_EnlacesImg/Ej2_Header/index.html" onclick="loadIframe(this)">3.2
+                Header Completo</button>
+            <button class="nav-link" data-url="Tema3_EnlacesImg/Ej3_MiniSitio/index.html" onclick="loadIframe(this)">3.3
+                Navegación Interna</button>
+            <button class="nav-link" data-url="Tema3_EnlacesImg/Ej4_Galeria/index.html" onclick="loadIframe(this)">3.4
+                Galería Figcaption</button>
+            <button class="nav-link" data-url="Tema3_EnlacesImg/Ej5_SitioCompleto/index.html"
+                onclick="loadIframe(this)">3.5 Sitio Agrupado</button>
+
+            <div class="theme-title">Tema 4: Tablas y Listas</div>
+            <button class="nav-link" data-url="Tema4_TablasListas/Ej1_Estudiantes/index.html"
+                onclick="loadIframe(this)">4.1 Estudiantes</button>
+            <button class="nav-link" data-url="Tema4_TablasListas/Ej2_Inventario/index.html"
+                onclick="loadIframe(this)">4.2 Inventario Semántico</button>
+            <button class="nav-link" data-url="Tema4_TablasListas/Ej3_Horarios/index.html"
+                onclick="loadIframe(this)">4.3 Horarios Agrupados</button>
+            <button class="nav-link" data-url="Tema4_TablasListas/Ej4_ManualInstrucciones/index.html"
+                onclick="loadIframe(this)">4.4 Manual y Listas</button>
+            <button class="nav-link" data-url="Tema4_TablasListas/Ej5_PortalEmpresa/index.html"
+                onclick="loadIframe(this)">4.5 Portal Directorio</button>
+
+            <div class="theme-title">Tema 5: Form Básicos</div>
+            <button class="nav-link" data-url="Tema5_Formularios/Ej1_Registro/index.html" onclick="loadIframe(this)">5.1
+                Form Registro</button>
+            <button class="nav-link" data-url="Tema5_Formularios/Ej2_Login/index.html" onclick="loadIframe(this)">5.2
+                Login</button>
+            <button class="nav-link" data-url="Tema5_Formularios/Ej3_Encuesta/index.html" onclick="loadIframe(this)">5.3
+                Encuesta Mix</button>
+            <button class="nav-link" data-url="Tema5_Formularios/Ej4_Contacto/index.html" onclick="loadIframe(this)">5.4
+                Contacto Textarea</button>
+            <button class="nav-link" data-url="Tema5_Formularios/Ej5_Inscripcion/index.html"
+                onclick="loadIframe(this)">5.5 Curso Radio/Check</button>
+
+            <div class="theme-title">Tema 6: Semántica</div>
+            <button class="nav-link" data-url="Tema6_Semantica/Ej1_Estructura/index.html" onclick="loadIframe(this)">6.1
+                Estructura Tags</button>
+            <button class="nav-link" data-url="Tema6_Semantica/Ej2_Blog/index.html" onclick="loadIframe(this)">6.2 Blog
+                con Aside</button>
+            <button class="nav-link" data-url="Tema6_Semantica/Ej3_Portfolio/index.html" onclick="loadIframe(this)">6.3
+                Portfolio Main</button>
+            <button class="nav-link" data-url="Tema6_Semantica/Ej4_Corporativa/index.html"
+                onclick="loadIframe(this)">6.4 Pág Corporativa</button>
+
+            <div class="theme-title">Tema 7: Multimedia</div>
+            <button class="nav-link" data-url="Tema7_Multimedia/Ej1_Galeria/index.html" onclick="loadIframe(this)">7.1
+                Galería Imágenes</button>
+            <button class="nav-link" data-url="Tema7_Multimedia/Ej2_Podcast/index.html" onclick="loadIframe(this)">7.2
+                Audio Nativo</button>
+            <button class="nav-link" data-url="Tema7_Multimedia/Ej3_VideoTutorial/index.html"
+                onclick="loadIframe(this)">7.3 Video Nativo</button>
+            <button class="nav-link" data-url="Tema7_Multimedia/Ej4_Embebido/index.html" onclick="loadIframe(this)">7.4
+                iFrames YouTube</button>
+            <button class="nav-link" data-url="Tema7_Multimedia/Ej5_RecursosWeb/index.html"
+                onclick="loadIframe(this)">7.5 Mural Multimedia</button>
+
+            <div class="theme-title">Tema 8: Form Avanz</div>
+            <button class="nav-link" data-url="Tema8_FormAvanz/Ej1_Validacion/index.html" onclick="loadIframe(this)">8.1
+                Val. Nativa</button>
+            <button class="nav-link" data-url="Tema8_FormAvanz/Ej2_Patrones/index.html" onclick="loadIframe(this)">8.2
+                Patrones Regex</button>
+            <button class="nav-link" data-url="Tema8_FormAvanz/Ej3_Fieldset/index.html" onclick="loadIframe(this)">8.3
+                Fieldset Org</button>
+            <button class="nav-link" data-url="Tema8_FormAvanz/Ej4_CompraOnline/index.html"
+                onclick="loadIframe(this)">8.4 Checkout Online</button>
+            <button class="nav-link" data-url="Tema8_FormAvanz/Ej5_RegistroPro/index.html"
+                onclick="loadIframe(this)">8.5 Registro Pro</button>
+
+            <div class="theme-title">Tema 9: SEO & Metas</div>
+            <button class="nav-link" data-url="Tema9_SEO/Ej1_HeadCompleto/index.html" onclick="loadIframe(this)">9.1
+
+                <head> Completo
+            </button>
+            <button class="nav-link" data-url="Tema9_SEO/Ej2_EstructuraSEO/index.html" onclick="loadIframe(this)">9.2
+                Tags SEO</button>
+            <button class="nav-link" data-url="Tema9_SEO/Ej3_HeadLanding/index.html" onclick="loadIframe(this)">9.3 Head
+                Landing</button>
+            <button class="nav-link" data-url="Tema9_SEO/Ej4_Atributos/index.html" onclick="loadIframe(this)">9.4
+                Atributos Data</button>
+            <button class="nav-link" data-url="Tema9_SEO/Ej5_CorpCompleta/index.html" onclick="loadIframe(this)">9.5
+                Corp. Completa</button>
+
+        </div>
+
+        <!-- Main Workspace -->
+        <div class="main-content">
+            <div class="header-bar">
+                <h3 id="currentTitle">1.1 Básico</h3>
+                <a id="extLink" href="Tema1_Intro/Ej1_Basico/index.html" target="_blank" class="btn-link">Abrir en
+                    Pestaña</a>
+            </div>
+            <div class="iframe-container">
+                <iframe id="viewer" src="Tema1_Intro/Ej1_Basico/index.html"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loadIframe(element) {
+            // Actualizar active state
+            document.querySelectorAll('.nav-link').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+
+            // Cargar URL
+            const url = element.getAttribute('data-url');
+            document.getElementById('viewer').src = url;
+
+            // Actualizar UI
+            document.getElementById('currentTitle').innerText = element.innerText;
+            document.getElementById('extLink').href = url;
+        }
+    </script>
+</body>
+
+</html>

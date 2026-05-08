@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C_T3_Ej5: Overflow</title>
+    <style>
+        body {{ font-family: system-ui, sans-serif; padding: 20px; background-color: #f8f9fa; color: #333; }}
+        .scroll-box {
+    width: 300px;
+    height: 150px;
+    padding: 15px;
+    border: 2px solid #0d6efd;
+    background: white;
+    overflow-y: scroll;
+}
+    </style>
+</head>
+<body>
+    <div class="scroll-box">
+    <p>Contenido muy largo para demostrar el uso de overflow: scroll. Este texto supera la altura de 150px designada para la caja, por tanto la barra de desplazamiento debería aparecer sistemáticamente a la derecha.</p>
+    <p>Más texto de relleno para forzar el scroll interno de este contenedor CSS.</p>
+</div>
+</body>
+</html>

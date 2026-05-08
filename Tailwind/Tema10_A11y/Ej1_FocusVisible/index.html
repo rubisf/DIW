@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TW T10 Ej1: Foco Visible</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: '#ff5733', 
+              primary: '#1c64f2',
+              secondary: '#10b981'
+            },
+            fontFamily: {
+                custom: ['Georgia', 'serif']
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .card { @apply bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300; }
+        .btn { @apply bg-blue-500 text-white p-3 rounded hover:bg-blue-600 active:bg-blue-700 transition duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300; }
+      }
+    </style>
+</head>
+<body class="bg-gray-50 p-6 flex flex-col gap-6 dark:bg-gray-900 transition-colors duration-300">
+        <h1 class="text-2xl mb-4 font-semibold text-center mt-10">Navegación por Teclado (TAB)</h1>
+    <div class="flex justify-center gap-6">
+        <!-- Mal foco -->
+        <button class="bg-gray-400 text-white p-3 rounded focus:outline-none">Botón sin focus ring (Inaccesible)</button>
+        <!-- Foco Seguro Accesible -->
+        <button class="bg-blue-600 text-white p-3 rounded focus:outline-none focus:ring-4 focus:ring-blue-400 focus:ring-offset-2 transition-shadow">Botón accesible (Correcto)</button>
+    </div>
+</body>
+</html>

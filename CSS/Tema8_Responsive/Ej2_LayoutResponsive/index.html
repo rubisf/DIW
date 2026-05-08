@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C_T8_Ej2: Media Queries Grid</title>
+    <style>
+        body {{ font-family: system-ui, sans-serif; padding: 20px; background-color: #f8f9fa; color: #333; }}
+        .grid-layout {
+    display: grid;
+    gap: 20px;
+    /* Mobile First: 1 columna por defecto */
+    grid-template-columns: 1fr; 
+}
+.card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+/* Tablet */
+@media (min-width: 768px) {
+    .grid-layout { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .grid-layout { grid-template-columns: repeat(4, 1fr); }
+}
+    </style>
+</head>
+<body>
+    <p>Reajusta la ventana para comprobar: 1 col (Móvil) &rarr; 2 cols (Tablet, >768px) &rarr; 4 cols (PC, >1024px)</p>
+<div class="grid-layout">
+    <div class="card"><h3>Item 1</h3></div>
+    <div class="card"><h3>Item 2</h3></div>
+    <div class="card"><h3>Item 3</h3></div>
+    <div class="card"><h3>Item 4</h3></div>
+</div>
+</body>
+</html>

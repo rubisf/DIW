@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TW T5 Ej3: Flex vs Grid Responsive</title>
+    <!-- Tailwind CSS (Play CDN para agilizar visualización directa) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: '#ff5733',
+              primary: '#1c64f2'
+            },
+            fontFamily: {
+                custom: ['Arial', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .card { @apply bg-white p-6 rounded-lg shadow-md; }
+        .btn { @apply bg-blue-500 text-white p-3 rounded hover:bg-blue-600 active:bg-blue-700 transition duration-300; }
+      }
+    </style>
+</head>
+<body class="bg-gray-50 p-6 flex flex-col gap-6">
+        <h1 class="text-xl mb-4 font-semibold text-center">Layouts Flexibles y Cuadrículas Responsive</h1>
+    
+    <h2 class="font-bold text-gray-600 mt-6 mb-2">Flex Responsive (Col -> Row)</h2>
+    <div class="flex flex-col md:flex-row gap-4">
+        <div class="bg-indigo-400 p-8 text-white rounded flex-1 text-center font-bold">A</div>
+        <div class="bg-indigo-500 p-8 text-white rounded flex-1 text-center font-bold">B</div>
+        <div class="bg-indigo-600 p-8 text-white rounded flex-1 text-center font-bold">C</div>
+    </div>
+
+    <h2 class="font-bold text-gray-600 mt-10 mb-2">Grid Responsive (1 -> 2 -> 4 columnas)</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-fuchsia-400 p-8 text-white rounded text-center font-bold">1</div>
+        <div class="bg-fuchsia-500 p-8 text-white rounded text-center font-bold">2</div>
+        <div class="bg-fuchsia-600 p-8 text-white rounded text-center font-bold">3</div>
+        <div class="bg-fuchsia-700 p-8 text-white rounded text-center font-bold">4</div>
+    </div>
+</body>
+</html>

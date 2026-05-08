@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Semántico con Aside</title>
+</head>
+<body>
+        <header>
+        <h1>El Diario del Programador</h1>
+    </header>
+    <nav>
+        <a href="#">Inicio</a> | <a href="#">Noticias</a> | <a href="#">Contacto</a>
+    </nav>
+    <div style="display:flex;">
+        <main style="flex:3;">
+            <article>
+                <h2>Aprender React en 2026</h2>
+                <time datetime="2026-02-28">28 de Febrero de 2026</time>
+                <p>Las nuevas features hacen React más accesible.</p>
+            </article>
+            <article>
+                <h2>Ventajas de TypeScript</h2>
+                <time datetime="2026-02-25">25 de Febrero de 2026</time>
+                <p>El tipado estricto evita errores en producción.</p>
+            </article>
+            <article>
+                <h2>¿Qué pasó con Vue?</h2>
+                <time datetime="2026-02-20">20 de Febrero de 2026</time>
+                <p>Un repaso al ecosistema actual.</p>
+            </article>
+        </main>
+        
+        <aside style="flex:1; border-left:1px solid #ccc; padding-left:10px;">
+            <h3>Noticias Destacadas</h3>
+            <ul>
+                <li><a href="#">Angular lanza su v18</a></li>
+                <li><a href="#">Nueva versión de Node</a></li>
+            </ul>
+        </aside>
+    </div>
+    <hr>
+    <footer>
+        <p>&copy; 2026 El Diario del Programador</p>
+    </footer>
+</body>
+</html>

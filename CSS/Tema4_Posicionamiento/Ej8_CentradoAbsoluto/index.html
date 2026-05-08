@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Ej8: Centrado Perfecto</title>
+    <style>
+        /* CSS Reset Básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* 
+           MÉTODO DE CENTRADO SELECCIONADO: 
+           Position Absolute + Transform (Clásico y Robusto para este tema de Posicionamiento)
+        */
+
+        body {
+            background-color: #0f172a;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+            /* Contenedor para el absoluto */
+        }
+
+        .caja-centrada {
+            /* 1. Posicionamiento absoluto */
+            position: absolute;
+
+            /* 2. Situar la esquina superior izquierda en el centro */
+            top: 50%;
+            left: 50%;
+
+            /* 3. Retroceder el 50% de SU propio tamaño para que el centro real coincida con el centro de la pantalla */
+            transform: translate(-50%, -50%);
+
+            /* Estilos estéticos */
+            width: 300px;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            color: white;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.025em;
+        }
+
+        p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        /* Indicadores visuales de ejes */
+        .eje-v {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 1px;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            z-index: -1;
+        }
+
+        .eje-h {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.05);
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Guías visuales para demostrar el centrado -->
+    <div class="eje-v"></div>
+    <div class="eje-h"></div>
+
+    <div class="caja-centrada">
+        <span class="icon">🎯</span>
+        <h1>Centrado Perfecto</h1>
+        <p>Logrado mediante <code>position: absolute</code>, <code>top: 50%</code>, <code>left: 50%</code> y
+            <code>transform: translate(-50%, -50%)</code>.</p>
+    </div>
+
+</body>
+
+</html>

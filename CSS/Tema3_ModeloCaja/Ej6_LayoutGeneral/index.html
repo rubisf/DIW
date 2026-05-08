@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Ej6: Layout Proporcional</title>
+    <style>
+        /* CSS Reset Básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            /* Centrado vertical para que se vea bien en el iframe */
+        }
+
+        /* 1. Contenedor Principal */
+        .contenedor {
+            /* ocupará el 80% del ancho de la pantalla */
+            width: 80%;
+            /* centrado horizontalmente */
+            margin: 0 auto;
+            /* color de fondo suave */
+            background-color: #e2e8f0;
+
+            /* Decoración extra para estética */
+            padding: 4rem 1rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 2. Caja Interna */
+        .caja-interna {
+            /* ocupa el 50% del ancho del contenedor */
+            width: 50%;
+            /* centrado relativo a su padre */
+            margin: 0 auto;
+
+            /* espacio interno con padding en rem */
+            padding: 2rem;
+
+            /* borde visible */
+            border: 3px dashed #475569;
+
+            /* texto centrado */
+            text-align: center;
+
+            /* Decoración extra para resaltar */
+            background-color: #ffffff;
+            border-radius: 8px;
+            color: #1e293b;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Estructura HTML solicitada -->
+    <div class="contenedor">
+        <div class="caja-interna">
+            Layout proporcional
+        </div>
+    </div>
+
+</body>
+
+</html>

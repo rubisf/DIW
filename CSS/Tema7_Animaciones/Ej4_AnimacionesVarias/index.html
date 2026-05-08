@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tema 7 Ej 4: Animaciones en Cascada</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: white;
+            overflow: hidden;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #38bdf8;
+            opacity: 0;
+            animation: fadeInDown 0.8s ease forwards;
+        }
+
+        .contenedor {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .tarjeta {
+            width: 200px;
+            height: 280px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+
+            /* ESTADO INICIAL PARA LA ANIMACIÓN (Invisible y escalado abajo) */
+            opacity: 0;
+            transform: scale(0.5);
+
+            /* ANIMACIÓN */
+            animation: appear 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        /* DELAYS EN CASCADA */
+        .tarjeta:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .tarjeta:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .tarjeta:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .icono {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .texto {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* KEYFRAMES */
+        @keyframes appear {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Botón de reinicio */
+        .reinicio {
+            margin-top: 50px;
+            padding: 10px 20px;
+            background: transparent;
+            border: 1px solid #38bdf8;
+            color: #38bdf8;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .reinicio:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Entrada en Cascada</h1>
+
+    <div class="contenedor">
+        <div class="tarjeta">
+            <div class="icono">🚀</div>
+            <div class="texto">Velocidad</div>
+        </div>
+        <div class="tarjeta">
+            <div class="icono">🎨</div>
+            <div class="texto">Diseño</div>
+        </div>
+        <div class="tarjeta">
+            <div class="icono">🛠️</div>
+            <div class="texto">Potencia</div>
+        </div>
+    </div>
+
+    <button class="reinicio" onclick="location.reload()">Reiniciar Animación</button>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Horarios</title>
+</head>
+<body>
+        <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Hora</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>08:00 - 09:00</td>
+                <td>Programación (A1)</td>
+                <td rowspan="2">Bases de Datos (A2)</td> <!-- Agrupa dos horas de BD -->
+            </tr>
+            <tr>
+                <td>09:00 - 10:00</td>
+                <td>Programación (A1)</td>
+            </tr>
+            <tr>
+                <td>10:00 - 11:00</td>
+                <td colspan="2" align="center" style="background:#ccc;">RECREO</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" align="center">Horarios sujetos a cambios trimestrales.</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

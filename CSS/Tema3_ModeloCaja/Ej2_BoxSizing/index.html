@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C_T3_Ej2: Box Sizing</title>
+    <style>
+        body {{ font-family: system-ui, sans-serif; padding: 20px; background-color: #f8f9fa; color: #333; }}
+        .box-demo { width: 200px; padding: 30px; border: 10px solid #dc3545; background: #f8d7da; margin-bottom: 20px; color: #842029; font-weight: bold; }
+.content-box { box-sizing: content-box; }
+.border-box { box-sizing: border-box; }
+    </style>
+</head>
+<body>
+    <div class="box-demo content-box">content-box (Ancho = 200 + 60 + 20)</div>
+<div class="box-demo border-box">border-box (Ancho = 200px en total)</div>
+</body>
+</html>

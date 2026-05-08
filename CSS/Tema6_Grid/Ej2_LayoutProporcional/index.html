@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tema 6 Ej 2: Grid Proporcional (2fr 1fr 1fr)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            padding: 40px;
+            color: #334155;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: #0891b2;
+            /* Cyan-600 */
+        }
+
+        .contenedor-grid {
+            display: grid;
+            /* REQUISITO: 3 columnas con anchos 2fr 1fr 1fr */
+            grid-template-columns: 2fr 1fr 1fr;
+
+            gap: 15px;
+            background-color: #e2e8f0;
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px dashed #94a3b8;
+        }
+
+        .columna {
+            background-color: #06b6d4;
+            /* Cyan-500 */
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .columna-destacada {
+            background-color: #0891b2;
+            /* Cyan-600 */
+        }
+
+        .fr-label {
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .desc-label {
+            font-size: 0.8rem;
+            opacity: 0.9;
+            font-weight: normal;
+        }
+
+        .explicacion {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 2px 4px;
+            border-radius: 4px;
+            color: #0e7490;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Ejercicio 2: Grid con Unidades Proporcionales (fr)</h1>
+    <p>La unidad <code>fr</code> (fractional unit) representa una fracción del espacio libre en el contenedor del grid.
+    </p>
+
+    <div class="contenedor-grid">
+        <div class="columna columna-destacada">
+            <span class="fr-label">2fr</span>
+            <span class="desc-label">Ocupa 2 partes</span>
+        </div>
+        <div class="columna">
+            <span class="fr-label">1fr</span>
+            <span class="desc-label">Ocupa 1 parte</span>
+        </div>
+        <div class="columna">
+            <span class="fr-label">1fr</span>
+            <span class="desc-label">Ocupa 1 parte</span>
+        </div>
+    </div>
+
+    <div class="explicacion">
+        <p><strong>¿Qué está ocurriendo?</strong></p>
+        <p>Al definir <code>grid-template-columns: 2fr 1fr 1fr;</code>, el navegador suma el total de fracciones (2 + 1
+            + 1 = 4) y divide el ancho disponible en 4 partes iguales.</p>
+        <ul>
+            <li>La primera columna recibe 2 de esas partes (50% del total).</li>
+            <li>La segunda y tercera columna reciben 1 parte cada una (25% cada una).</li>
+        </ul>
+        <p>A diferencia de los porcentajes, las unidades <code>fr</code> calculan el espacio automáticamente después de
+            restar los <code>gap</code> y otros elementos fijos.</p>
+    </div>
+
+</body>
+
+</html>

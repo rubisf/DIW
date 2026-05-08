@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Tema 7 Ej 4: Componentes Dinámicos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        /* 1. Definimos la clase base .btn usando @apply */
+        @layer components {
+            .btn {
+                @apply px-8 py-4 font-bold rounded-full shadow-lg transition-all duration-300 transform active:scale-95 focus:outline-none ring-offset-2 focus:ring-2;
+            }
+        }
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;800&display=swap');
+
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-indigo-50 min-h-screen flex flex-col items-center justify-center p-6 text-center">
+
+    <div class="max-w-md w-full bg-white rounded-3xl p-10 shadow-2xl border border-indigo-100">
+        <h1 class="text-3xl font-extrabold text-slate-900 mb-4">Estado Dinámico</h1>
+        <p class="text-slate-500 mb-10 text-balance leading-relaxed">
+            Un mismo componente <code>.btn</code> puede cambiar su apariencia totalmente mediante JavaScript sin
+            duplicar estilos.
+        </p>
+
+        <!-- 1. El botón con la clase base .btn y un color por defecto -->
+        <div class="mb-10">
+            <button id="dynamicBtn" class="btn bg-indigo-600 text-white hover:bg-indigo-700 ring-indigo-400">
+                ¡Púlsame!
+            </button>
+        </div>
+
+        <div class="space-y-4">
+            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Controles de Estado</p>
+            <div class="flex flex-wrap justify-center gap-2">
+                <button onclick="changeColor('bg-emerald-500', 'hover:bg-emerald-600', 'ring-emerald-400')"
+                    class="w-8 h-8 rounded-full bg-emerald-500 border-2 border-white shadow-sm" title="Verde"></button>
+                <button onclick="changeColor('bg-rose-500', 'hover:bg-rose-600', 'ring-rose-400')"
+                    class="w-8 h-8 rounded-full bg-rose-500 border-2 border-white shadow-sm" title="Rojo"></button>
+                <button onclick="changeColor('bg-amber-500', 'hover:bg-amber-600', 'ring-amber-400')"
+                    class="w-8 h-8 rounded-full bg-amber-500 border-2 border-white shadow-sm" title="Naranja"></button>
+                <button onclick="changeColor('bg-indigo-600', 'hover:bg-indigo-700', 'ring-indigo-400')"
+                    class="w-8 h-8 rounded-full bg-indigo-600 border-2 border-white shadow-sm"
+                    title="Original"></button>
+            </div>
+        </div>
+
+        <div class="mt-10 p-4 bg-slate-50 rounded-xl text-left border border-slate-100 italic text-sm text-slate-500">
+            "Observa cómo el JS solo intercambia clases de color, mientras que la estructura y comportamiento (.btn)
+            permanece intacta."
+        </div>
+    </div>
+
+    <!-- 2. JAVASCRIPT PARA CAMBIAR EL COLOR -->
+    <script>
+        const btn = document.getElementById('dynamicBtn');
+        let currentClasses = ['bg-indigo-600', 'hover:bg-indigo-700', 'ring-indigo-400'];
+
+        function changeColor(newBg, newHover, newRing) {
+            // Eliminamos las clases de color actuales
+            btn.classList.remove(...currentClasses);
+
+            // Añadimos las nuevas
+            currentClasses = [newBg, newHover, newRing];
+            btn.classList.add(...currentClasses);
+
+            // Efecto visual extra
+            btn.innerText = "Color Actualizado";
+            setTimeout(() => btn.innerText = "¡Púlsame!", 1000);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- 1. HEAD OPTIMIZADO CON SEO Y OPEN GRAPH -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexGen Solutions | Innovación Digital y Transformación</title>
+    <meta name="description"
+        content=" NexGen Solutions ayuda a empresas a escalar mediante tecnología de vanguardia, inteligencia artificial y diseño centrado en el usuario.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph para Redes Sociales -->
+    <meta property="og:title" content="NexGen Solutions - Tu Partner Digital">
+    <meta property="og:description" content="Líderes en transformación digital para el sector empresarial.">
+    <meta property="og:image"
+        content="../../../img/product.png">
+    <meta property="og:type" content="website">
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --accent: #f59e0b;
+            --text: #1e293b;
+            --light: #f8fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Estructura Semántica: header, main, section, footer... */
+        header {
+            background: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .hero {
+            padding: 100px 5%;
+            text-align: center;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: #475569;
+        }
+
+        .services {
+            padding: 80px 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        /* Uso adecuado de atributos globales: id, class, title... */
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        /* Imágenes accesibles */
+        .service-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        /* Mensaje de alerta para ARIA */
+        .alert {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            color: #92400e;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 5%;
+            display: none;
+            /* Se activa con JS */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- DECISIÓN TÉCNICA: Se usa <header> para la cabecera y <nav> para el menú, garantizando semántica clara para lectores de pantalla. -->
+    <header role="banner">
+        <div class="logo">NexGen</div>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <button class="btn" aria-label="Abrir panel de cliente" title="Acceso Clientes">Portal</button>
+    </header>
+
+    <main id="inicio">
+        <!-- DECISIÓN TÉCNICA: El <h1> es único y describe el propósito principal del sitio para SEO. -->
+        <section class="hero">
+            <h1>Soluciones Digitales de Próxima Generación</h1>
+            <p>Ayudamos a las empresas a navegar la complejidad del mundo digital con arquitectura robusta y diseño
+                excepcional.</p>
+            <!-- ARIA: aria-live para notificar cambios dinámicos -->
+            <button class="btn" onclick="document.getElementById('promo').style.display='block'"
+                aria-controls="promo">Ver Promoción</button>
+        </section>
+
+        <!-- DECIDIÓN TÉCNICA: aria-live="polite" para que el lector lea el mensaje cuando aparezca sin interrumpir. -->
+        <div id="promo" class="alert" role="alert" aria-live="polite">
+            ¡Atención! Consulta nuestro nuevo descuento del 20% para startups. <span
+                onclick="this.parentElement.style.display='none'" style="cursor:pointer; font-weight:bold"
+                aria-label="Cerrar aviso">&times;</span>
+        </div>
+
+        <section class="services" id="proyectos">
+            <!-- DECISIÓN TÉCNICA: Se usa <article> para elementos que tienen sentido por sí solos como tipos de servicios. -->
+            <article class="card">
+                <!-- ARIA: alt descriptivo para accesibilidad en imágenes -->
+                <img src="../../../img/product.png"
+                    alt="Programador escribiendo código en una laptop con pantalla oscura" class="service-img">
+                <h2>Desarrollo Web</h2>
+                <p>Aplicaciones a medida escalables y optimizadas para buscadores nativamente.</p>
+            </article>
+
+            <article class="card">
+                <img src="../../../img/product.png"
+                    alt="Dashboard con gráficos estadísticos de rendimiento empresarial" class="service-img">
+                <h2>Análisis de Datos</h2>
+                <p>Convertimos tus datos en decisiones inteligentes mediante BI y visualización avanzada.</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- DECISIÓN TÉCNICA: El <footer> contiene información legal y de contacto, esencial para la estructura. -->
+    <footer role="contentinfo">
+        <p>&copy; 2026 NexGen Solutions S.L. Todos los derechos reservados.</p>
+        <p style="margin-top: 1rem; font-size: 0.8rem; opacity: 0.6;">ISO 27001 Certified Developer</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tema 5 Ej 7: Align Content (Flex Wrap)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            padding: 40px;
+            color: #334155;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: #6366f1;
+        }
+
+        .controls {
+            margin-bottom: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        select {
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid #cbd5e1;
+            background: white;
+            cursor: pointer;
+        }
+
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            /* REQUISITO */
+            background-color: #e2e8f0;
+            padding: 10px;
+            border: 2px dashed #94a3b8;
+            border-radius: 12px;
+            height: 400px;
+            /* Altura fija para ver el efecto de align-content */
+            gap: 10px;
+            transition: align-content 0.3s ease;
+        }
+
+        .caja {
+            background-color: #ec4899;
+            /* Pink */
+            width: 100px;
+            height: 80px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .info {
+            margin-top: 30px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 2px 4px;
+            border-radius: 4px;
+            color: #be185d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Ejercicio 7: Align Content</h1>
+
+    <div class="controls">
+        <label for="alignContent">Cambiar <code>align-content</code>:</label>
+        <select id="alignContent" onchange="updateAlignContent(this.value)">
+            <option value="stretch">stretch (pordefecto)</option>
+            <option value="center">center</option>
+            <option value="flex-start">flex-start</option>
+            <option value="flex-end">flex-end</option>
+            <option value="space-between">space-between</option>
+            <option value="space-around">space-around</option>
+        </select>
+    </div>
+
+    <div class="contenedor" id="flexContenedor">
+        <div class="caja">1</div>
+        <div class="caja">2</div>
+        <div class="caja">3</div>
+        <div class="caja">4</div>
+        <div class="caja">5</div>
+        <div class="caja">6</div>
+        <div class="caja">7</div>
+        <div class="caja">8</div>
+    </div>
+
+    <div class="info">
+        <p><strong>¿Qué es align-content?</strong></p>
+        <p>Esta propiedad solo funciona cuando hay <strong>múltiples líneas</strong> (gracias a
+            <code>flex-wrap: wrap</code>). Define cómo se distribuye el espacio entre las líneas de elementos en el eje
+            secundario.</p>
+    </div>
+
+    <script>
+        function updateAlignContent(value) {
+            document.getElementById('flexContenedor').style.alignContent = value;
+        }
+    </script>
+
+</body>
+
+</html>

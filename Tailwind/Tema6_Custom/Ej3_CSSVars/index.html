@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Tema 6 Ej 3: Configuración de Colores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // CONFIGURACIÓN DE TAILWIND
+        tailwind.config = {
+            theme: {
+                // 1. Sobrescribir el color azul (fuera de extend reemplaza el original)
+                colors: {
+                    // Mantenemos otros colores necesarios para el demo
+                    white: '#ffffff',
+                    slate: {
+                        50: '#f8fafc',
+                        800: '#1e293b',
+                        900: '#0f172a',
+                    },
+                    indigo: {
+                        900: '#312e81',
+                        950: '#1e1b4b',
+                    },
+                    // SOBRESCRITURA: Ahora 'blue' será una gama de púrpuras en lugar de azules
+                    blue: {
+                        500: '#a855f7',
+                        600: '#9333ea',
+                        700: '#7e22ce',
+                    }
+                },
+                extend: {
+                    // 2. Añadir un color 'secondary' sin eliminar los demás (dentro de extend)
+                    colors: {
+                        secondary: {
+                            light: '#fbbf24',
+                            DEFAULT: '#f59e0b',
+                            dark: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-900 text-white min-h-screen flex flex-col items-center justify-center p-6 text-center">
+
+    <div class="max-w-xl w-full bg-slate-800 rounded-3xl p-10 shadow-2xl border border-slate-700">
+        <h1 class="text-3xl font-bold mb-8">Personalización de Temas</h1>
+
+        <div class="space-y-8">
+            <!-- 3. DIV MOSTRANDO COLOR AZUL SOBRESCRITO -->
+            <div class="space-y-3">
+                <p class="text-sm uppercase tracking-widest text-slate-400">Color 'blue-600' sobrescrito</p>
+                <div
+                    class="h-24 w-full bg-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-purple-500/20">
+                    <span class="font-bold">Este "Blue" es Púrpura</span>
+                </div>
+                <p class="text-xs text-slate-500 italic">Clase usada: bg-blue-600 (vía sobrescritura en 'colors')</p>
+            </div>
+
+            <hr class="border-slate-700">
+
+            <!-- 3. DIV MOSTRANDO COLOR SECONDARY AÑADIDO -->
+            <div class="space-y-3">
+                <p class="text-sm uppercase tracking-widest text-slate-400">Color 'secondary' añadido</p>
+                <div
+                    class="h-24 w-full bg-secondary rounded-2xl flex items-center justify-center shadow-lg shadow-amber-500/20 text-slate-900">
+                    <span class="font-bold uppercase tracking-tighter">Color Secundario (Ámbar)</span>
+                </div>
+                <p class="text-xs text-slate-500 italic">Clase usada: bg-secondary (vía 'extend')</p>
+            </div>
+        </div>
+
+        <div class="mt-10 p-6 bg-slate-900/50 rounded-xl text-left border border-slate-700">
+            <h3 class="text-sm font-bold text-indigo-400 mb-2">Resumen de Configuración:</h3>
+            <ul class="text-xs space-y-2 text-slate-400">
+                <li>✅ <strong>Sobrescritura:</strong> El objeto <code>colors</code> raíz reemplaza la paleta por
+                    defecto.</li>
+                <li>✅ <strong>Extensión:</strong> <code>extend.colors</code> añade nuevos tokens sin borrar los
+                    existentes.</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

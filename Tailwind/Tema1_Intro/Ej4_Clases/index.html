@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TW Ej4: Funciones Clases</title>
+    <!-- Tailwind CSS (Play CDN para agilizar visualización directa) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: '#ff5733',
+              primary: '#1c64f2'
+            },
+            fontFamily: {
+                custom: ['Arial', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .card { @apply bg-white p-6 rounded-lg shadow-md; }
+        .btn { @apply bg-blue-500 text-white p-3 rounded hover:bg-blue-600 active:bg-blue-700 transition duration-300; }
+      }
+    </style>
+</head>
+<body class="bg-gray-50 p-6 flex flex-col gap-6">
+        <h1 class="text-2xl font-bold mb-4">Ejercicio 4: Función de las Clases</h1>
+    <ul class="list-disc pl-5 mb-4">
+        <li><code class="bg-gray-200 px-1">bg-gray-200</code>: Fondo gris claro.</li>
+        <li><code class="bg-gray-200 px-1">p-6</code>: Padding en todos los lados.</li>
+        <li><code class="bg-gray-200 px-1">rounded-lg</code>: Bordes redondeados grandes.</li>
+        <li><code class="bg-gray-200 px-1">shadow-md</code>: Sombra media.</li>
+        <li><code class="bg-gray-200 px-1">text-center</code>: Texto centrado.</li>
+    </ul>
+    <div class="bg-gray-200 p-6 rounded-lg shadow-md text-center text-blue-800 font-bold">
+        Caja Resultante
+    </div>
+</body>
+</html>

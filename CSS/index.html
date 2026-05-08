@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolución de Ejercicios - CSS Puro</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar Native CSS */
+        .sidebar {
+            width: 280px;
+            min-width: 280px;
+            background: white;
+            border-right: 1px solid #dee2e6;
+            overflow-y: auto;
+            padding: 20px 10px;
+            box-sizing: border-box;
+        }
+
+        .navbar-brand {
+            font-size: 1.25rem;
+            font-weight: bold;
+            padding: 10px;
+            color: #0d6efd;
+            display: block;
+            border-bottom: 2px solid #0d6efd;
+            margin-bottom: 15px;
+        }
+
+        .theme-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #6c757d;
+            font-weight: bold;
+            margin: 15px 0 5px 10px;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 8px 15px;
+            color: #495057;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-bottom: 2px;
+            font-size: 14px;
+            background: transparent;
+            border: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .nav-link:hover {
+            background-color: #e9ecef;
+        }
+
+        .nav-link.active {
+            background-color: #0d6efd;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Main View */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+            background: #f8f9fa;
+        }
+
+        .header-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .header-bar h3 {
+            margin: 0;
+            color: #212529;
+        }
+
+        .btn-link {
+            display: inline-block;
+            padding: 6px 12px;
+            font-size: 14px;
+            color: #0d6efd;
+            border: 1px solid #0d6efd;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: 0.2s;
+            background: white;
+        }
+
+        .btn-link:hover {
+            background: #0d6efd;
+            color: white;
+        }
+
+        .iframe-container {
+            flex: 1;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            background: white;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="navbar-brand">Ejercicios CSS Puro</div>
+
+            <div class="theme-title">Tema 1: Selectores</div>
+            <button class="nav-link active" data-url="Tema1_Selectores/Ej1_Botones/index.html"
+                onclick="loadIframe(this)">1.1 Botones</button>
+            <button class="nav-link" data-url="Tema1_Selectores/Ej2_Tabs/index.html" onclick="loadIframe(this)">1.2
+                Tabs</button>
+            <button class="nav-link" data-url="Tema1_Selectores/Ej3_Navbar/index.html" onclick="loadIframe(this)">1.3
+                Navbar</button>
+            <button class="nav-link" data-url="Tema1_Selectores/Ej4_SelectorVista/index.html"
+                onclick="loadIframe(this)">1.4 Selector Vista</button>
+            <button class="nav-link" data-url="Tema1_Selectores/Ej5_Layout/index.html" onclick="loadIframe(this)">1.5
+                Layout Cards</button>
+            <button class="nav-link" data-url="Tema1_Selectores/Ej6_Pricing/index.html" onclick="loadIframe(this)">1.6
+                Pricing (BS5)</button>
+
+            <div class="theme-title">Tema 2: BEM</div>
+            <button class="nav-link" data-url="Tema2_BuenasPracticas/Ej1_BEM/index.html" onclick="loadIframe(this)">2.1
+                BEM Card</button>
+
+            <div class="theme-title">Tema 3: Modelo Caja</div>
+            <button class="nav-link" data-url="Tema3_ModeloCaja/Ej1_CajaBase/index.html" onclick="loadIframe(this)">3.1
+                Caja Base</button>
+            <button class="nav-link" data-url="Tema3_ModeloCaja/Ej2_BoxSizing/index.html" onclick="loadIframe(this)">3.2
+                Box Sizing</button>
+            <button class="nav-link" data-url="Tema3_ModeloCaja/Ej3_MarginCollapse/index.html"
+                onclick="loadIframe(this)">3.3 Margin Collapse</button>
+            <button class="nav-link" data-url="Tema3_ModeloCaja/Ej4_CardCentrada/index.html"
+                onclick="loadIframe(this)">3.4 Card Centrada</button>
+            <button class="nav-link" data-url="Tema3_ModeloCaja/Ej5_OverflowScroll/index.html"
+                onclick="loadIframe(this)">3.5 Overflow Scroll</button>
+            <button class="nav-link" data-url="Tema3_ModeloCaja/Ej6_LayoutGeneral/index.html"
+                onclick="loadIframe(this)">3.6 Layout General</button>
+
+            <div class="theme-title">Tema 4: Posicionamiento</div>
+            <button class="nav-link" data-url="Tema4_Posicionamiento/Ej1_Display/index.html"
+                onclick="loadIframe(this)">4.1 Display</button>
+            <button class="nav-link" data-url="Tema4_Posicionamiento/Ej2_DisplayNone/index.html"
+                onclick="loadIframe(this)">4.2 Display None</button>
+            <button class="nav-link" data-url="Tema4_Posicionamiento/Ej3_Relativo/index.html"
+                onclick="loadIframe(this)">4.3 Relativo</button>
+            <button class="nav-link" data-url="Tema4_Posicionamiento/Ej4_AbsolutoBadge/index.html"
+                onclick="loadIframe(this)">4.4 Absoluto Badge</button>
+            <button class="nav-link" data-url="Tema4_Posicionamiento/Ej5_BotonFixed/index.html"
+                onclick="loadIframe(this)">4.5 Botón Fixed</button>
+            <button class="nav-link" data-url="Tema4_Posicionamiento/Ej6_Sticky/index.html"
+                onclick="loadIframe(this)">4.6 Menú Sticky</button>
+            <button class="nav-link" data-url="Tema4_Posicionamiento/Ej7_ZIndex/index.html"
+                onclick="loadIframe(this)">4.7 Cajas Z-Index</button>
+            <button class="nav-link" data-url="Tema4_Posicionamiento/Ej8_CentradoAbsoluto/index.html"
+                onclick="loadIframe(this)">4.8 Centrado Absoluto</button>
+
+            <div class="theme-title">Tema 5: Flexbox</div>
+            <button class="nav-link" data-url="Tema5_Flexbox/Ej1_FlexBasic/index.html" onclick="loadIframe(this)">5.1
+                Flex Basic (Fila)</button>
+            <button class="nav-link" data-url="Tema5_Flexbox/Ej2_FlexDirection/index.html"
+                onclick="loadIframe(this)">5.2
+                Flex Direction (Columna)</button>
+            <button class="nav-link" data-url="Tema5_Flexbox/Ej3_JustifyContent/index.html"
+                onclick="loadIframe(this)">5.3 Justify Content</button>
+            <button class="nav-link" data-url="Tema5_Flexbox/Ej4_AlignItems/index.html" onclick="loadIframe(this)">5.4
+                Align Items (Vertical)</button>
+            <button class="nav-link" data-url="Tema5_Flexbox/Ej5_FlexWrap/index.html" onclick="loadIframe(this)">5.5
+                Flex Wrap</button>
+            <button class="nav-link" data-url="Tema5_Flexbox/Ej6_FlexProp/index.html" onclick="loadIframe(this)">5.6
+                Proporción Flex</button>
+            <button class="nav-link" data-url="Tema5_Flexbox/Ej7_AlignContent/index.html" onclick="loadIframe(this)">5.7
+                Align Content (Wrap)</button>
+            <button class="nav-link" data-url="Tema5_Flexbox/EjFinal_Layout_Mini/index.html"
+                onclick="loadIframe(this)">5.Final
+                Mini-Layout</button>
+
+            <div class="theme-title">Tema 6: Grid</div>
+            <button class="nav-link" data-url="Tema6_Grid/Ej1_GridBasico/index.html" onclick="loadIframe(this)">6.1 Grid
+                Básico fr</button>
+            <button class="nav-link" data-url="Tema6_Grid/Ej2_LayoutProporcional/index.html"
+                onclick="loadIframe(this)">6.2
+                Layout Proporcional</button>
+            <button class="nav-link" data-url="Tema6_Grid/Ej3_FilasAutomaticas/index.html"
+                onclick="loadIframe(this)">6.3
+                Filas Automáticas</button>
+            <button class="nav-link" data-url="Tema6_Grid/Ej4_GridAreas/index.html" onclick="loadIframe(this)">6.4 Grid
+                Areas Layout</button>
+            <button class="nav-link" data-url="Tema6_Grid/Ej5_DashboardGrid/index.html" onclick="loadIframe(this)">6.5
+                Dashboard Grid</button>
+            <button class="nav-link" data-url="Tema6_Grid/Ej6_AlineacionCelda/index.html" onclick="loadIframe(this)">6.6
+                Alineación Celda</button>
+            <button class="nav-link" data-url="Tema6_Grid/Ej7_GridResponsive/index.html" onclick="loadIframe(this)">6.7
+                Grid Auto-fit</button>
+
+            <div class="theme-title">Tema 7: Animaciones</div>
+            <button class="nav-link" data-url="Tema7_Animaciones/Ej1_BotonHover/index.html"
+                onclick="loadIframe(this)">7.1 Botón Animado</button>
+            <button class="nav-link" data-url="Tema7_Animaciones/Ej2_CardFlip/index.html" onclick="loadIframe(this)">7.2
+                Card Flip 3D</button>
+            <button class="nav-link" data-url="Tema7_Animaciones/Ej3_Loader/index.html" onclick="loadIframe(this)">7.3
+                CSS Loader</button>
+            <button class="nav-link" data-url="Tema7_Animaciones/Ej4_AnimacionesVarias/index.html"
+                onclick="loadIframe(this)">7.4 Animaciones Varias</button>
+            <button class="nav-link" data-url="Tema7_Animaciones/Ej5_ComponenteAvanzado/index.html"
+                onclick="loadIframe(this)">7.5 Componente Avanzado</button>
+            <button class="nav-link" data-url="Tema7_Animaciones/Ej6_MiniProyecto/index.html"
+                onclick="loadIframe(this)">7.6 Mini Proyecto</button>
+
+            <div class="theme-title">Tema 8: Responsive</div>
+            <button class="nav-link" data-url="Tema8_Responsive/Ej1_Altura100vh/index.html"
+                onclick="loadIframe(this)">8.1 Hero 100vh Clamp</button>
+            <button class="nav-link" data-url="Tema8_Responsive/Ej2_LayoutResponsive/index.html"
+                onclick="loadIframe(this)">8.2 Grid Media Queries</button>
+            <button class="nav-link" data-url="Tema8_Responsive/Ej3_NavbarResponsiva/index.html"
+                onclick="loadIframe(this)">8.3 Navbar Responsive</button>
+            <button class="nav-link" data-url="Tema8_Responsive/Ej4_GaleriaFluida/index.html"
+                onclick="loadIframe(this)">8.4 Galería Sin M.Q.</button>
+            <button class="nav-link" data-url="Tema8_Responsive/Ej6_TextoSlam/index.html" onclick="loadIframe(this)">8.6
+                Tipografía Fluida (Slam)</button>
+
+        </div>
+
+        <!-- Main Workspace -->
+        <div class="main-content">
+            <div class="header-bar">
+                <h3 id="currentTitle">1.1 Botones</h3>
+                <a id="extLink" href="Tema1_Selectores/Ej1_Botones/index.html" target="_blank" class="btn-link">Abrir en
+                    Pestaña</a>
+            </div>
+            <div class="iframe-container">
+                <iframe id="viewer" src="Tema1_Selectores/Ej1_Botones/index.html"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loadIframe(element) {
+            // Actualizar active state
+            document.querySelectorAll('.nav-link').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+
+            // Cargar URL
+            const url = element.getAttribute('data-url');
+            document.getElementById('viewer').src = url;
+
+            // Actualizar UI
+            document.getElementById('currentTitle').innerText = element.innerText;
+            document.getElementById('extLink').href = url;
+        }
+    </script>
+</body>
+
+</html>

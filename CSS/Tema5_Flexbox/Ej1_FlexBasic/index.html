@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tema 5 Ej 1: Flex Basic (Alineación en Fila)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            padding: 40px;
+            color: #1c1e21;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: #0d6efd;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #65676b;
+        }
+
+        /* CSS Proporcionado por el ejercicio */
+        .contenedor {
+            display: flex;
+            background-color: #f2f2f2;
+            padding: 10px;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            /* Extra para visualización */
+            min-height: 100px;
+            align-items: center;
+        }
+
+        .caja {
+            background-color: coral;
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .info {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #e7f3ff;
+            border-left: 5px solid #0d6efd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Ejercicio 1: Flex Basic</h1>
+    <p>Observa cómo los elementos se alinean automáticamente en una fila al aplicar <code>display: flex</code> al
+        contenedor padre.</p>
+
+    <!-- HTML Proporcionado por el ejercicio -->
+    <div class="contenedor">
+        <div class="caja">1</div>
+        <div class="caja">2</div>
+        <div class="caja">3</div>
+    </div>
+
+    <div class="info">
+        <strong>Nota:</strong> Por defecto, el eje principal (main axis) de Flexbox es horizontal (row), por lo que las
+        cajas se posicionan una al lado de la otra sin necesidad de floats o posicionamiento absoluto.
+    </div>
+
+</body>
+
+</html>

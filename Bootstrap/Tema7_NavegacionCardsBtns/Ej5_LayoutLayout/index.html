@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TW Ej5: Layout de Cards Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .custom-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 10;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- Header: Navbar responsive -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#"><i class="bi bi-bootstrap-fill text-primary"></i>
+                    NewsPortal</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tecnología</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Diseño</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Desarrollo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main: Grid de cards de artículos -->
+    <main class="container py-5">
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h1 class="display-5 fw-bold text-dark">Últimos Artículos</h1>
+                <p class="lead text-muted">Descubre las novedades del mundo del desarrollo web.</p>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm position-relative">
+                    <span class="badge bg-primary custom-badge rounded-pill px-3 py-2">Desarrollo</span>
+                    <img src="../../../img/product.png"
+                        class="card-img-top rounded-top" alt="Desarrollo Web">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">El futuro de Bootstrap</h5>
+                        <p class="card-text text-muted flex-grow-1">Explorando las nuevas utilidades y el motor de
+                            variables de CSS introducido en las versiones modernas del framework para mayor
+                            flexibilidad.</p>
+                        <a href="#" class="btn btn-outline-primary mt-3 w-100 rounded-pill fw-medium">Leer más <i
+                                class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm position-relative">
+                    <span class="badge bg-success custom-badge rounded-pill px-3 py-2">Tecnología</span>
+                    <img src="../../../img/product.png"
+                        class="card-img-top rounded-top" alt="Tecnología">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Inteligencia Artificial en UX</h5>
+                        <p class="card-text text-muted flex-grow-1">Cómo los nuevos modelos de lenguaje están ayudando a
+                            los diseñadores a prototipar interfaces de manera más ágil y efectiva.</p>
+                        <a href="#" class="btn btn-outline-success mt-3 w-100 rounded-pill fw-medium">Leer más <i
+                                class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm position-relative">
+                    <span class="badge bg-warning custom-badge text-dark rounded-pill px-3 py-2">Diseño</span>
+                    <img src="../../../img/product.png"
+                        class="card-img-top rounded-top" alt="Diseño UI">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Tendencias de interfaces web</h5>
+                        <p class="card-text text-muted flex-grow-1">Analizamos el retorno al skeumorfismo tenue, efectos
+                            glassmorphism y las paletas de colores vibrantes para este nuevo año.</p>
+                        <a href="#" class="btn btn-outline-warning mt-3 w-100 rounded-pill fw-medium">Leer más <i
+                                class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm position-relative">
+                    <span class="badge bg-info custom-badge text-dark rounded-pill px-3 py-2">Accesibilidad</span>
+                    <img src="../../../img/product.png"
+                        class="card-img-top rounded-top" alt="Code">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">A11y desde el inicio</h5>
+                        <p class="card-text text-muted flex-grow-1">Por qué pensar en la accesibilidad durante la fase
+                            de diseño ahorra tiempo y dinero, además de abrir el producto al 100% de los usuarios.</p>
+                        <a href="#" class="btn btn-outline-info mt-3 w-100 rounded-pill fw-medium">Leer más <i
+                                class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm position-relative">
+                    <span class="badge bg-danger custom-badge rounded-pill px-3 py-2">Seguridad</span>
+                    <img src="../../../img/product.png"
+                        class="card-img-top rounded-top" alt="Seguridad">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Protección Frontend</h5>
+                        <p class="card-text text-muted flex-grow-1">Estrategias efectivas del lado del cliente para
+                            sanitizar inputs y prevenir vulnerabilidades XSS en componentes de formularios.</p>
+                        <a href="#" class="btn btn-outline-danger mt-3 w-100 rounded-pill fw-medium">Leer más <i
+                                class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm position-relative">
+                    <span class="badge bg-secondary custom-badge rounded-pill px-3 py-2">Tutoriales</span>
+                    <img src="../../../img/product.png"
+                        class="card-img-top rounded-top" alt="Tutorial">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Migración a Bootstrap 5</h5>
+                        <p class="card-text text-muted flex-grow-1">Guía paso a paso para actualizar proyectos antiguos
+                            usando herramientas de refactorización y entendiendo los breaking changes.</p>
+                        <a href="#" class="btn btn-outline-secondary mt-3 w-100 rounded-pill fw-medium">Leer más <i
+                                class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

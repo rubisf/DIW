@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolución de Ejercicios - Tailwind CSS</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 m-0 p-0 font-sans">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="w-72 min-w-[280px] bg-white border-r border-gray-200 overflow-y-auto p-4">
+            <div class="text-xl font-bold text-sky-500 border-b-2 border-sky-500 pb-3 mb-4">Ejercicios Tailwind</div>
+
+            <div class="text-xs uppercase text-gray-500 font-bold mt-4 mb-2 ml-2">Tema 1: Intro</div>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1 active-link bg-sky-500 text-white font-bold"
+                data-url="Tema1_Intro/Ej1_PrimerContacto/index.html" onclick="loadIframe(this)">1.1 Hola
+                Tailwind</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema1_Intro/Ej2_CSSTradicionalVsTailwind/index.html" onclick="loadIframe(this)">1.2 CSS vs
+                TW</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema1_Intro/Ej3_Opciones/index.html" onclick="loadIframe(this)">1.3 Bootstrap vs TW</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema1_Intro/Ej4_Clases/index.html" onclick="loadIframe(this)">1.4 Función Clases</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema1_Intro/Ej5_CardBorder/index.html" onclick="loadIframe(this)">1.5 Card Tailwind</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema1_Intro/Ej6_Uso/index.html" onclick="loadIframe(this)">1.6 Casos de Uso</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema1_Intro/Ej7_Minireto/index.html" onclick="loadIframe(this)">1.7 Minireto</button>
+
+            <div class="text-xs uppercase text-gray-500 font-bold mt-4 mb-2 ml-2">Tema 2: Instalación</div>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema2_Instalacion/Ej1_CDN/index.html" onclick="loadIframe(this)">2.1 CDN Testing</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema2_Instalacion/Ej7_Output/index.html" onclick="loadIframe(this)">2.7 Output CSS</button>
+
+            <div class="text-xs uppercase text-gray-500 font-bold mt-4 mb-2 ml-2">Tema 3: Bases</div>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema3_Bases/Ej1_Espaciados/index.html" onclick="loadIframe(this)">3.1 Espaciados</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema3_Bases/Ej2_Cajas/index.html" onclick="loadIframe(this)">3.2 Cajas (Gap)</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema3_Bases/Ej3_Colores/index.html" onclick="loadIframe(this)">3.3 Colores y Borde</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema3_Bases/Ej4_Tipografia/index.html" onclick="loadIframe(this)">3.4 Tipografía</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema3_Bases/Ej5_Bordes/index.html" onclick="loadIframe(this)">3.5 Sombras</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema3_Bases/Ej6_Estados/index.html" onclick="loadIframe(this)">3.6 Estados Hover</button>
+
+            <div class="text-xs uppercase text-gray-500 font-bold mt-4 mb-2 ml-2">Tema 4: Layout</div>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema4_Layout/Ej1_Flex/index.html" onclick="loadIframe(this)">4.1 Flexbox</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema4_Layout/Ej2_Grid/index.html" onclick="loadIframe(this)">4.2 Grid Setup</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema4_Layout/Ej3_Dimensiones/index.html" onclick="loadIframe(this)">4.3 Dimensiones</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema4_Layout/Ej4_Posicion/index.html" onclick="loadIframe(this)">4.4
+                Absolute/Relative</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema4_Layout/Ej5_Overflow/index.html" onclick="loadIframe(this)">4.5 Overflow</button>
+
+            <div class="text-xs uppercase text-gray-500 font-bold mt-4 mb-2 ml-2">Tema 5: Responsive</div>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema5_Responsive/Ej1_Breakpoints/index.html" onclick="loadIframe(this)">5.1
+                Breakpoints</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema5_Responsive/Ej2_Ocultar/index.html" onclick="loadIframe(this)">5.2
+                Visibilidad</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema5_Responsive/Ej3_FlexGrid/index.html" onclick="loadIframe(this)">5.3 Responsive
+                Flex</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema5_Responsive/Ej4_Anchos/index.html" onclick="loadIframe(this)">5.4 Grid
+                Adaptativo</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema5_Responsive/Ej5_Tipografia/index.html" onclick="loadIframe(this)">5.5 Tipografía
+                Fluida</button>
+
+            <div class="text-xs uppercase text-gray-500 font-bold mt-4 mb-2 ml-2">Tema 6: Custom</div>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema6_Custom/Ej1_Config/index.html" onclick="loadIframe(this)">6.1 Default Theme</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema6_Custom/Ej2_Extender/index.html" onclick="loadIframe(this)">6.2 Extended Vars</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema6_Custom/Ej3_CSSVars/index.html" onclick="loadIframe(this)">6.3 Custom Config</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema6_Custom/Ej4_DarkMode/index.html" onclick="loadIframe(this)">6.4 Dark Mode</button>
+
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema7_Components/Ej1_Reutilizar/index.html" onclick="loadIframe(this)">7.1
+                Reutilización</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema7_Components/Ej2_Apply/index.html" onclick="loadIframe(this)">7.2 @Apply Clases</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema7_Components/Ej3_Archivos/index.html" onclick="loadIframe(this)">7.3 Componentes
+                Ext.</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema7_Components/Ej4_Dinamicos/index.html" onclick="loadIframe(this)">7.4 Dinámicos
+                JS</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema7_Components/Ej5_ProyectoCards/index.html" onclick="loadIframe(this)">7.5 Proyecto
+                Cards</button>
+
+            <div class="text-xs uppercase text-gray-500 font-bold mt-4 mb-2 ml-2">Tema 8: Formularios</div>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema8_Formularios/Ej1_Inputs/index.html" onclick="loadIframe(this)">8.1 Inputs
+                Básicos</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema8_Formularios/Ej2_BotonesEstados/index.html" onclick="loadIframe(this)">8.2 Botones
+                Estados</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema8_Formularios/Ej3_SelectTextarea/index.html" onclick="loadIframe(this)">8.3 Select
+                Textarea</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema8_Formularios/Ej4_Focus/index.html" onclick="loadIframe(this)">8.4 Focus Forms</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema8_Formularios/Ej5_Errores/index.html" onclick="loadIframe(this)">8.5 Errores
+                Visuales</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema8_Formularios/Ej6_Layout/index.html" onclick="loadIframe(this)">8.6 Grid Form</button>
+
+            <div class="text-xs uppercase text-gray-500 font-bold mt-4 mb-2 ml-2">Tema 9: Animaciones</div>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema9_Animaciones/Ej1_Transiciones/index.html" onclick="loadIframe(this)">9.1
+                Transiciones</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema9_Animaciones/Ej2_Transform/index.html" onclick="loadIframe(this)">9.2 Transform
+                Hover</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema9_Animaciones/Ej3_ShadowHover/index.html" onclick="loadIframe(this)">9.3 Shadow
+                Hover</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema9_Animaciones/Ej4_PulseBounce/index.html" onclick="loadIframe(this)">9.4
+                Bounce/Pulse/Spin</button>
+
+            <div class="text-xs uppercase text-gray-500 font-bold mt-4 mb-2 ml-2">Tema 10: A11y</div>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema10_A11y/Ej1_FocusVisible/index.html" onclick="loadIframe(this)">10.1 Foco Teclado</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema10_A11y/Ej2_Contraste/index.html" onclick="loadIframe(this)">10.2 Contraste Base</button>
+            <button
+                class="nav-link block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+                data-url="Tema10_A11y/Ej3_EstadosAccesibles/index.html" onclick="loadIframe(this)">10.3 Estados
+                A11y</button>
+
+        </div>
+
+        <!-- Main Workspace -->
+        <div class="flex-1 flex flex-col p-6 overflow-hidden bg-gray-50">
+            <div class="flex justify-between items-center mb-4">
+                <h3 id="currentTitle" class="text-2xl font-semibold text-gray-800">1.1 Hola Tailwind</h3>
+                <a id="extLink" href="Tema1_Intro/Ej1_PrimerContacto/index.html" target="_blank"
+                    class="px-4 py-2 text-sm font-medium text-sky-600 bg-white border border-sky-600 rounded-lg hover:bg-sky-50 transition-colors">
+                    Abrir en Pestaña Nueva
+                </a>
+            </div>
+            <div class="flex-1 border border-gray-200 rounded-xl bg-white overflow-hidden shadow-sm">
+                <iframe id="viewer" src="Tema1_Intro/Ej1_PrimerContacto/index.html"
+                    class="w-full h-full border-none"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loadIframe(element) {
+            // Actualizar active state de la nevegación
+            document.querySelectorAll('.nav-link').forEach(btn => {
+                btn.classList.remove('bg-sky-500', 'text-white', 'font-bold');
+                btn.classList.add('text-gray-700', 'hover:bg-gray-100');
+            });
+            element.classList.remove('text-gray-700', 'hover:bg-gray-100');
+            element.classList.add('bg-sky-500', 'text-white', 'font-bold');
+
+            // Cargar URL en el iframe
+            const url = element.getAttribute('data-url');
+            document.getElementById('viewer').src = url;
+
+            // Actualizar UI del iframe contenedor superior
+            document.getElementById('currentTitle').innerText = element.innerText;
+            document.getElementById('extLink').href = url;
+        }
+    </script>
+</body>
+
+</html>

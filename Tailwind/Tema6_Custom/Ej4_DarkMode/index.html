@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TW T6 Ej4: Dark Mode Integrado</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: '#ff5733', 
+              primary: '#1c64f2',
+              secondary: '#10b981'
+            },
+            fontFamily: {
+                custom: ['Georgia', 'serif']
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .card { @apply bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300; }
+        .btn { @apply bg-blue-500 text-white p-3 rounded hover:bg-blue-600 active:bg-blue-700 transition duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300; }
+      }
+    </style>
+</head>
+<body class="bg-gray-50 p-6 flex flex-col gap-6 dark:bg-gray-900 transition-colors duration-300">
+        <h1 class="text-xl mb-4 font-semibold text-center text-gray-800 dark:text-gray-100">Tailwind Modo Oscuro</h1>
+    <div class="bg-white dark:bg-gray-800 text-gray-800 dark:text-white p-8 rounded shadow-lg text-center max-w-sm mx-auto transition-colors duration-300">
+        <h2 class="font-bold text-2xl">Card Camaleónica</h2>
+        <p class="mt-2 text-gray-600 dark:text-gray-400">Me adapto al modo activo (clase "dark" en body/html)</p>
+    </div>
+    <div class="text-center mt-6">
+        <button onclick="document.body.classList.toggle('dark')" class="btn">Cambiar a Dark Mode / Light Mode</button>
+    </div>
+</body>
+</html>

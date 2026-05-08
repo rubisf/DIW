@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación Regex</title>
+</head>
+<body>
+        <h2>Validaciones Complejas</h2>
+    <form action="#" method="post">
+        <label for="dni">DNI (8 Números y 1 Letra):</label>
+        <!-- Patrón regex para un DNI español clásico -->
+        <input type="text" id="dni" name="dni" pattern="[0-9]{8}[A-Za-z]" title="Debe contener 8 dígitos y una letra" required><br><br>
+        
+        <label for="tel">Teléfono (9 dígitos):</label>
+        <input type="tel" id="tel" name="tel" pattern="[0-9]{9}" title="Introduce 9 números sin espacios" required><br><br>
+        
+        <label for="cp">Código Postal (5 números):</label>
+        <input type="text" id="cp" name="cp" pattern="[0-9]{5}" required><br><br>
+        
+        <input type="submit" value="Validar">
+    </form>
+</body>
+</html>

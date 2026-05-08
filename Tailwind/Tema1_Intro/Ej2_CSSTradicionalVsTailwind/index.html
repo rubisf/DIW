@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TW Ej2: CSS vs Tailwind</title>
+    <!-- Tailwind CSS (Play CDN para agilizar visualización directa) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: '#ff5733',
+              primary: '#1c64f2'
+            },
+            fontFamily: {
+                custom: ['Arial', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .card { @apply bg-white p-6 rounded-lg shadow-md; }
+        .btn { @apply bg-blue-500 text-white p-3 rounded hover:bg-blue-600 active:bg-blue-700 transition duration-300; }
+      }
+    </style>
+</head>
+<body class="bg-gray-50 p-6 flex flex-col gap-6">
+        <h1 class="text-2xl font-bold mb-4">Ejercicio 2: CSS Tradicional vs Tailwind</h1>
+    <p class="mb-4">La Opción B usa Tailwind y es más rápida de leer y escribir conociendo la utilidad.</p>
+    <button class="bg-green-500 p-3 text-white rounded shadow-sm hover:bg-green-600">Botón Tailwind Válido</button>
+</body>
+</html>

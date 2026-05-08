@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Ej6: Pricing Layout con Bootstrap</title>
+    <!-- Solicitado explícitamente hacerlo EXCLUSIVAMENTE con Bootstrap, sin CSS propio -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- Navbar con dropdown -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><i class="bi bi-box-fill me-2"></i>SaaS Platform</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navcol-1">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Características</a></li>
+                    <!-- Dropdown solicitado -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Recursos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Documentación</a></li>
+                            <li><a class="dropdown-item" href="#">Blog</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Soporte</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="ms-3">
+                    <a class="btn btn-outline-light btn-sm" role="button" href="#">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero con botón CTA -->
+    <header class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light mb-3">Planes diseñados para crecer contigo</h1>
+                <p class="lead text-muted mb-4">Ya seas un desarrollador autónomo o manejes un gran equipo, tenemos una
+                    solución a la medida de tus necesidades, escalable y robusta.</p>
+                <p>
+                    <a href="#precios" class="btn btn-primary btn-lg px-4 me-md-2 shadow-sm">Ver Tarifas</a>
+                    <a href="#" class="btn btn-outline-secondary btn-lg px-4">Prueba de 14 días</a>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Pestañas toggle (Botones Mensual/Anual) -->
+    <div class="container mb-5 text-center" id="precios">
+        <div class="btn-group shadow-sm" role="group" aria-label="Toggle Period">
+            <input type="radio" class="btn-check" name="btnradio" id="btnMensual" autocomplete="off" checked>
+            <label class="btn btn-outline-primary px-4" for="btnMensual">Facturación Mensual</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnAnual" autocomplete="off">
+            <label class="btn btn-outline-primary px-4" for="btnAnual">Facturación Anual <span
+                    class="badge bg-success ms-1">-20%</span></label>
+        </div>
+    </div>
+
+    <!-- Sección Pricing Cards -->
+    <main class="container mb-5 pb-5">
+        <div class="row row-cols-1 row-cols-md-3 text-center g-4 align-items-center">
+
+            <!-- Plan Básico -->
+            <div class="col">
+                <div class="card shadow-sm h-100 border-0 border-top border-5 border-secondary">
+                    <div class="card-header bg-white border-0 py-3">
+                        <h4 class="my-0 fw-normal text-muted">Básico</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title display-4 fw-bold">0€<small
+                                class="text-muted fw-light fs-5">/mes</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>10 Usuarios
+                                incluidos</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>2 GB de
+                                almacenamiento</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Soporte por correo
+                            </li>
+                            <li class="mb-2"><i class="bi bi-dash-circle text-muted me-2"></i><s>Centro de ayuda
+                                    prioritario</s></li>
+                        </ul>
+                        <button type="button" class="w-100 btn btn-lg btn-outline-primary">Registrarse gratis</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plan Intermedio (Destacado) -->
+            <div class="col">
+                <div class="card shadow rounded-3 border-primary position-relative z-1 py-3"
+                    style="transform: scale(1.05);">
+                    <div class="position-absolute top-0 start-50 translate-middle">
+                        <span class="badge rounded-pill bg-danger fs-6 px-3 shadow">MÁS POPULAR</span>
+                    </div>
+                    <div class="card-header border-0 bg-transparent py-3">
+                        <h3 class="my-0 fw-bold text-primary">Profesional</h3>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title display-4 fw-bold">15€<small
+                                class="text-muted fw-light fs-5">/mes</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4 text-start ms-4 ms-lg-5">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>20 Usuarios
+                                incluidos</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>10 GB de
+                                almacenamiento</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Soporte
+                                prioritario</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Acceso a API Rest
+                            </li>
+                        </ul>
+                        <button type="button" class="w-100 btn btn-lg btn-primary shadow">Empezar ahora</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plan Avanzado -->
+            <div class="col">
+                <div class="card shadow-sm h-100 border-0 border-top border-5 border-info">
+                    <div class="card-header border-0 bg-white py-3">
+                        <h4 class="my-0 fw-normal text-muted">Enterprise</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title display-4 fw-bold">29€<small
+                                class="text-muted fw-light fs-5">/mes</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>30 Usuarios
+                                incluidos</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>15 GB de
+                                almacenamiento</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Soporte telefónico
+                            </li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Acceso 24/7 de
+                                emergencia</li>
+                        </ul>
+                        <button type="button" class="w-100 btn btn-lg btn-outline-info">Contactar ventas</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

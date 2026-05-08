@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C_T1_Ej3: Navbar</title>
+    <style>
+        body {{ font-family: system-ui, sans-serif; padding: 20px; background-color: #f8f9fa; color: #333; }}
+        .navbar { display: flex; justify-content: space-between; align-items: center; background-color: #212529; color: white; padding: 10px 20px; }
+.navbar-brand { font-size: 20px; font-weight: bold; }
+.nav-links { display: flex; list-style: none; margin: 0; padding: 0; gap: 15px; }
+.nav-links a { color: white; text-decoration: none; }
+.nav-links a:hover { color: #aaa; }
+.navbar-right { margin-left: auto; }
+.btn-login { background-color: #198754; color: white; border: none; padding: 8px 15px; cursor: pointer; border-radius: 4px; margin-left:15px; }
+.menu-hamburguesa { display: none; background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
+@media (max-width: 600px) {
+    .nav-links { display: none; }
+    .menu-hamburguesa { display: block; }
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="navbar-brand">MiLogo</div>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li><li><a href="#">Servicios</a></li>
+        <li><a href="#">Precios</a></li><li><a href="#">Contacto</a></li>
+    </ul>
+    <div class="navbar-right">
+        <button class="btn-login">Login</button>
+        <button class="menu-hamburguesa">&#9776;</button>
+    </div>
+</nav>
+</body>
+</html>

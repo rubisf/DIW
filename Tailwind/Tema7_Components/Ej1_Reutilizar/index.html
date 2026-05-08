@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Tema 7 Ej 1: Reutilización de Diseño</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 min-h-screen p-8 text-slate-800">
+
+    <div class="max-w-3xl mx-auto space-y-12">
+
+        <header class="text-center border-b pb-8">
+            <h1 class="text-3xl font-bold text-slate-900">Componentes y Reutilización</h1>
+            <p class="text-slate-500 mt-2">Cómo mantener la consistencia visual repitiendo clases de utilidad.</p>
+        </header>
+
+        <!-- SECCIÓN 1 -->
+        <section class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+            <h2 class="text-xl font-bold mb-4">Sección de Registro</h2>
+            <p class="mb-6 text-slate-600">Completa tus datos para empezar a disfrutar de todas las ventajas de nuestra
+                plataforma.</p>
+
+            <!-- REQUISITO 1: Botón con clases específicas -->
+            <button class="bg-green-500 text-white p-3 rounded hover:bg-green-600 transition-colors font-semibold">
+                Confirmar Registro
+            </button>
+        </section>
+
+        <!-- SECCIÓN DE SEPARACIÓN -->
+        <div class="flex items-center justify-center gap-4 text-slate-300">
+            <div class="h-px bg-slate-200 flex-1"></div>
+            <span class="text-xs uppercase font-bold tracking-tighter">Mismo diseño, diferentes lugares</span>
+            <div class="h-px bg-slate-200 flex-1"></div>
+        </div>
+
+        <!-- SECCIÓN 2 -->
+        <section class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 text-right">
+            <h2 class="text-xl font-bold mb-4">Suscripción Newsletter</h2>
+            <p class="mb-6 text-slate-600">No te pierdas nuestras actualizaciones semanales sobre diseño y desarrollo
+                web.</p>
+
+            <!-- REQUISITO 2: Segundo botón idéntico -->
+            <button class="bg-green-500 text-white p-3 rounded hover:bg-green-600 transition-colors font-semibold">
+                Suscribirme ahora
+            </button>
+        </section>
+
+        <footer class="mt-12 p-6 bg-slate-900 rounded-xl text-white">
+            <h3 class="font-bold mb-2">Reflexión sobre Reutilización:</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+                Aunque aquí hemos copiado y pegado las clases
+                <code>bg-green-500 text-white p-3 rounded hover:bg-green-600</code>, en proyectos reales de Tailwind
+                esto se gestiona mediante <strong>componentes</strong> (en React/Vue) o mediante la directiva
+                <code>@apply</code> en CSS para evitar la repetición manual si el proyecto crece.
+            </p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

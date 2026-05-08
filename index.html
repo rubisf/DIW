@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo de Interfaces Web (DIW) - Soluciones y Teoría</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+        }
+        .bg-pattern {
+            background-color: #f8fafc;
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        /* Scrollbar styles for the theory lists */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        /* Smooth details animation */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-pattern min-h-screen text-slate-800 antialiased selection:bg-indigo-500 selection:text-white pb-12">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-br from-indigo-700 via-purple-700 to-indigo-900 text-white shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.8)_0,transparent_100%)]"></div>
+        <div class="max-w-7xl mx-auto px-6 py-20 relative z-10 text-center">
+            <div class="inline-block p-4 bg-white/10 rounded-2xl backdrop-blur-md mb-6 border border-white/20 shadow-lg">
+                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                </svg>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 drop-shadow-md">
+                Desarrollo de Interfaces Web
+            </h1>
+            <p class="text-lg md:text-2xl text-indigo-100 font-medium max-w-3xl mx-auto drop-shadow">
+                Índice de Teoría y Solución de Ejercicios Integrados
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 py-12 -mt-10 relative z-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Tema 1 -->
+            <div class="glass-card rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group flex flex-col">
+                <div class="h-3 w-full bg-gradient-to-r from-blue-500 to-cyan-400"></div>
+                <div class="p-8 flex-grow flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-4 bg-blue-100 text-blue-600 rounded-2xl group-hover:scale-110 transition-transform shadow-inner">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-800">Tema 1</h2>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-600 mb-8 flex-grow leading-tight">Historia de Internet y Prototipado</h3>
+                    <div class="space-y-4 mt-auto">
+                        <details class="group/theory">
+                            <summary class="flex items-center justify-between cursor-pointer w-full py-3 px-4 bg-slate-50 hover:bg-slate-100 text-slate-700 font-semibold rounded-xl transition-all border border-slate-200 hover:shadow-md select-none">
+                                <div class="flex items-center gap-3 text-blue-700">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                    Archivos de Teoría (5)
+                                </div>
+                                <svg class="w-5 h-5 text-slate-400 group-open/theory:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="mt-2 space-y-1 pl-2 pr-1 max-h-48 overflow-y-auto custom-scrollbar">
+                                <a href="https://docs.google.com/presentation/d/1bP9VWJk0W9abvR1qy3AEjpacK5keqqJlwRa9L7_3vC4/edit?usp=drive_link" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-blue-700 py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                                    <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                    TEMA 1 - Teoria Interfaces
+                                </a>
+                                <a href="https://docs.google.com/presentation/d/1dwdwwFnuFwkPEcF2DpSSMvZtwDfN6RYgFUb-ALtAVS4/edit?usp=drive_link" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-blue-700 py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                                    <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                    TEMA 2 - Teoria Interfaces
+                                </a>
+                                <a href="https://docs.google.com/presentation/d/1W_0uoWRgtzOlvwKPInjP9dpvFz1kkXLQFSSL5WD-vX0/edit?usp=drive_link" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-blue-700 py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                                    <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                    TEMA 3 - Teoria Interfaces
+                                </a>
+                                <a href="https://docs.google.com/presentation/d/1ghOVBTj9Y7O6_QGrFslcV-qD7pyT2RrY3-GdvAFA86I/edit?usp=drive_link" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-blue-700 py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                                    <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                    TEMA 4 - Teoria Interfaces
+                                </a>
+                                <a href="https://docs.google.com/presentation/d/1VmKBRVyflHoFDvHHbkdo4ffTYMb7I5_Ws7b0Iy7eD_s/edit?usp=drive_link" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-blue-700 py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                                    <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                    TEMA 5 - Teoria Interfaces
+                                </a>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tema 2 -->
+            <div class="glass-card rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group flex flex-col">
+                <div class="h-3 w-full bg-gradient-to-r from-orange-500 to-amber-400"></div>
+                <div class="p-8 flex-grow flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-4 bg-orange-100 text-orange-600 rounded-2xl group-hover:scale-110 transition-transform shadow-inner">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-800">Tema 2</h2>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-600 mb-8 flex-grow leading-tight">HTML</h3>
+                    <div class="space-y-4 mt-auto">
+                        <details class="group/theory">
+                            <summary class="flex items-center justify-between cursor-pointer w-full py-3 px-4 bg-slate-50 hover:bg-slate-100 text-slate-700 font-semibold rounded-xl transition-all border border-slate-200 hover:shadow-md select-none">
+                                <div class="flex items-center gap-3 text-orange-700">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                    Archivos de Teoría (9)
+                                </div>
+                                <svg class="w-5 h-5 text-slate-400 group-open/theory:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="mt-2 space-y-1 pl-2 pr-1 max-h-48 overflow-y-auto custom-scrollbar">
+                                <a href="https://docs.google.com/presentation/d/1RM-H96ngylAnc7MVjGDQXt9jF3NJS2GC6ywnYxm-qmE/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-orange-700 py-2 px-3 rounded-lg hover:bg-orange-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 1 HTML</a>
+                                <a href="https://docs.google.com/presentation/d/1Cy_Rd_Cnh_gQXWw4uqvRaiwj_if5j5nnOo_xBIOkExU/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-orange-700 py-2 px-3 rounded-lg hover:bg-orange-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 2 HTML</a>
+                                <a href="https://docs.google.com/presentation/d/1CJhUwxsUVa54s9zbT0V35RV-5Q6cZRmHfTAq8BhEKO0/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-orange-700 py-2 px-3 rounded-lg hover:bg-orange-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 3 HTML</a>
+                                <a href="https://docs.google.com/presentation/d/1hcHK9n_6BO_fOpLvf0AjzliqZ8vcynPA-mTFQo4-no4/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-orange-700 py-2 px-3 rounded-lg hover:bg-orange-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 4 HTML</a>
+                                <a href="https://docs.google.com/presentation/d/1QK7hzOszfz24HbuYJBuyY5xucp6cmS2ocDJc3Cifg50/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-orange-700 py-2 px-3 rounded-lg hover:bg-orange-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 5 HTML</a>
+                                <a href="https://docs.google.com/presentation/d/1LdUiZq7n4KP3TsnYel9wWFX-yiDQQA9PwAJtONPqDV0/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-orange-700 py-2 px-3 rounded-lg hover:bg-orange-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 6 HTML</a>
+                                <a href="https://docs.google.com/presentation/d/1yy3eeL10QtQ4oSZbJFwiRHWxL9xtb2AlWj7nvNqo73o/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-orange-700 py-2 px-3 rounded-lg hover:bg-orange-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 7 HTML</a>
+                                <a href="https://docs.google.com/presentation/d/1iimMGOUxYe-FfOem52WT_Npy1hc5BEmEVy79uTNLUaQ/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-orange-700 py-2 px-3 rounded-lg hover:bg-orange-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 8 HTML</a>
+                                <a href="https://docs.google.com/presentation/d/10QSZa7jbzDvZo-olselhImJfSOX7CHaDpzX0q4kJnWk/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-orange-700 py-2 px-3 rounded-lg hover:bg-orange-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 9 HTML</a>
+                            </div>
+                        </details>
+                        <a href="HTML/index.html" class="flex items-center justify-center gap-3 w-full py-3.5 px-4 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-xl transition-all shadow-lg shadow-orange-500/40 hover:shadow-orange-600/50">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                            Ejercicios Resueltos
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tema 3 -->
+            <div class="glass-card rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group flex flex-col">
+                <div class="h-3 w-full bg-gradient-to-r from-indigo-500 to-blue-500"></div>
+                <div class="p-8 flex-grow flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-4 bg-indigo-100 text-indigo-600 rounded-2xl group-hover:scale-110 transition-transform shadow-inner">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-800">Tema 3</h2>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-600 mb-8 flex-grow leading-tight">CSS</h3>
+                    <div class="space-y-4 mt-auto">
+                        <details class="group/theory">
+                            <summary class="flex items-center justify-between cursor-pointer w-full py-3 px-4 bg-slate-50 hover:bg-slate-100 text-slate-700 font-semibold rounded-xl transition-all border border-slate-200 hover:shadow-md select-none">
+                                <div class="flex items-center gap-3 text-indigo-700">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                    Archivos de Teoría (8)
+                                </div>
+                                <svg class="w-5 h-5 text-slate-400 group-open/theory:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="mt-2 space-y-1 pl-2 pr-1 max-h-48 overflow-y-auto custom-scrollbar">
+                                <a href="https://docs.google.com/presentation/d/17OKmcqn_b8jqTaqviyvJzSEds4HU6uz-D9B3xZsZWWM/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-indigo-700 py-2 px-3 rounded-lg hover:bg-indigo-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 1 CSS</a>
+                                <a href="https://docs.google.com/presentation/d/1QqeHOn9PWjPsoZB5ZZRoY4nGIcjJzTU2tsopB6tiJBs/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-indigo-700 py-2 px-3 rounded-lg hover:bg-indigo-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 2 CSS</a>
+                                <a href="https://docs.google.com/presentation/d/1NGBxOG3w97W9tFjqQzCfSTOH_9L1Qu6wDfDUlGtR7K8/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-indigo-700 py-2 px-3 rounded-lg hover:bg-indigo-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 3 CSS</a>
+                                <a href="https://docs.google.com/presentation/d/1ZwW1p7V_VOZfVb-mekyydl2mA7eHC46waODukk2wSEs/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-indigo-700 py-2 px-3 rounded-lg hover:bg-indigo-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 4 CSS</a>
+                                <a href="https://docs.google.com/presentation/d/1TzPX_nUE5FUB8t3ss6b1Gyt8P7AuUJgAB6tNnfFZiHs/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-indigo-700 py-2 px-3 rounded-lg hover:bg-indigo-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 5 CSS</a>
+                                <a href="https://docs.google.com/presentation/d/1LD8LY_-AoZqW9yALb_GMIaMzTf0C6yUnPKvcZ4Aya5s/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-indigo-700 py-2 px-3 rounded-lg hover:bg-indigo-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 6 CSS</a>
+                                <a href="https://docs.google.com/presentation/d/1vqLnjN4oXl3Y1nFXG4Sa0l6NBDLqL9LYy0SUuwp4fN4/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-indigo-700 py-2 px-3 rounded-lg hover:bg-indigo-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 7 CSS</a>
+                                <a href="https://docs.google.com/presentation/d/19SD__i8-BwdWTo6tExz2MhtlWX6trDj0cMrbTqImMrc/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-indigo-700 py-2 px-3 rounded-lg hover:bg-indigo-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 8 CSS</a>
+                            </div>
+                        </details>
+                        <a href="CSS/index.html" class="flex items-center justify-center gap-3 w-full py-3.5 px-4 bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white font-semibold rounded-xl transition-all shadow-lg shadow-indigo-500/40 hover:shadow-indigo-600/50">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                            Ejercicios Resueltos
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tema 4 -->
+            <div class="glass-card rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group flex flex-col">
+                <div class="h-3 w-full bg-gradient-to-r from-pink-500 to-rose-400"></div>
+                <div class="p-8 flex-grow flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-4 bg-pink-100 text-pink-600 rounded-2xl group-hover:scale-110 transition-transform shadow-inner">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-800">Tema 4</h2>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-600 mb-8 flex-grow leading-tight">Sass y LESS</h3>
+                    <div class="space-y-4 mt-auto">
+                        <details class="group/theory">
+                            <summary class="flex items-center justify-between cursor-pointer w-full py-3 px-4 bg-slate-50 hover:bg-slate-100 text-slate-700 font-semibold rounded-xl transition-all border border-slate-200 hover:shadow-md select-none">
+                                <div class="flex items-center gap-3 text-pink-700">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                    Archivos de Teoría
+                                </div>
+                                <svg class="w-5 h-5 text-slate-400 group-open/theory:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="mt-2 space-y-1 pl-2 pr-1 max-h-48 overflow-y-auto custom-scrollbar">
+                                <a href="https://docs.google.com/presentation/d/1ZgypVJpGAt0dHaYkmKrgaaFny51PEppGBXhaCjvieHQ/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-pink-700 py-2 px-3 rounded-lg hover:bg-pink-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 1 - SASS y LESS</a>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tema 5 -->
+            <div class="glass-card rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group flex flex-col">
+                <div class="h-3 w-full bg-gradient-to-r from-purple-500 to-violet-500"></div>
+                <div class="p-8 flex-grow flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-4 bg-purple-100 text-purple-600 rounded-2xl group-hover:scale-110 transition-transform shadow-inner">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-800">Tema 5</h2>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-600 mb-8 flex-grow leading-tight">Bootstrap</h3>
+                    <div class="space-y-4 mt-auto">
+                        <details class="group/theory">
+                            <summary class="flex items-center justify-between cursor-pointer w-full py-3 px-4 bg-slate-50 hover:bg-slate-100 text-slate-700 font-semibold rounded-xl transition-all border border-slate-200 hover:shadow-md select-none">
+                                <div class="flex items-center gap-3 text-purple-700">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                    Archivos de Teoría (8)
+                                </div>
+                                <svg class="w-5 h-5 text-slate-400 group-open/theory:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="mt-2 space-y-1 pl-2 pr-1 max-h-48 overflow-y-auto custom-scrollbar">
+                                <a href="https://docs.google.com/presentation/d/1g96W21A74LDo5iuStJgs83reVH0vS2W7oCL7jTpHk2w/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-purple-700 py-2 px-3 rounded-lg hover:bg-purple-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 1 - Introduccion a Bootstrap 5</a>
+                                <a href="https://docs.google.com/presentation/d/1CypX50hvhqdLJjA1Q5L6h-DG87jgaJYveGdYTx73hBE/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-purple-700 py-2 px-3 rounded-lg hover:bg-purple-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 2 - Sistema de Grid en Bootstrap 5</a>
+                                <a href="https://docs.google.com/presentation/d/1fOyAP_EjcpZxoNtAU2I4PDPiHfCYvgO7crqhd4vWFfk/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-purple-700 py-2 px-3 rounded-lg hover:bg-purple-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 3 - Utilidades</a>
+                                <a href="https://docs.google.com/presentation/d/1pUnWWs2zxAWgA57_q3SBmSjKElI4-TbwCz8nCVNnriY/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-purple-700 py-2 px-3 rounded-lg hover:bg-purple-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 4 - Tipografia</a>
+                                <a href="https://docs.google.com/presentation/d/1JW6267UpoXZf68pTUCyR2YGi-lP_BVbSZXQp_P2jstg/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-purple-700 py-2 px-3 rounded-lg hover:bg-purple-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 5 - Componentes de Navegacion</a>
+                                <a href="https://docs.google.com/presentation/d/1ZHw8YHovBccH7UbScU1R5q42fcSRTAAr_2AOZ0xUuWE/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-purple-700 py-2 px-3 rounded-lg hover:bg-purple-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 6 - Componentes de Contenido</a>
+                                <a href="https://docs.google.com/presentation/d/17OKmcqn_b8jqTaqviyvJzSEds4HU6uz-D9B3xZsZWWM/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-purple-700 py-2 px-3 rounded-lg hover:bg-purple-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 7 - Componentes I Navegacion Navbar...</a>
+                                <a href="https://docs.google.com/presentation/d/1LRDn_ftw_x33jD33kv1_zf_Ae0G8br9OcLiV8PhoGTw/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-purple-700 py-2 px-3 rounded-lg hover:bg-purple-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 8 - Formularios en Bootstrap 5</a>
+                            </div>
+                        </details>
+                        <a href="Bootstrap/index.html" class="flex items-center justify-center gap-3 w-full py-3.5 px-4 bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all shadow-lg shadow-purple-500/40 hover:shadow-purple-600/50">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                            Ejercicios Resueltos
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Práctica 7 Tailwind -->
+            <div class="glass-card rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group flex flex-col">
+                <div class="h-3 w-full bg-gradient-to-r from-teal-400 to-emerald-500"></div>
+                <div class="p-8 flex-grow flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-4 bg-teal-100 text-teal-600 rounded-2xl group-hover:scale-110 transition-transform shadow-inner">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-800">Práctica 7</h2>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-600 mb-8 flex-grow leading-tight">Tailwind CSS</h3>
+                    <div class="space-y-4 mt-auto">
+                        <details class="group/theory">
+                            <summary class="flex items-center justify-between cursor-pointer w-full py-3 px-4 bg-slate-50 hover:bg-slate-100 text-slate-700 font-semibold rounded-xl transition-all border border-slate-200 hover:shadow-md select-none">
+                                <div class="flex items-center gap-3 text-teal-700">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                    Archivos de Teoría (10)
+                                </div>
+                                <svg class="w-5 h-5 text-slate-400 group-open/theory:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="mt-2 space-y-1 pl-2 pr-1 max-h-48 overflow-y-auto custom-scrollbar">
+                                <a href="https://docs.google.com/presentation/d/1iio1b77cQC1rwmmWyXNQKEtbIzifIIdmt9tFme5NBpY/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-teal-700 py-2 px-3 rounded-lg hover:bg-teal-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 1 Tailwind</a>
+                                <a href="https://docs.google.com/presentation/d/1j7WIl4zW-B2MqPEeRh2rRBudpwH2T02LESRuakCvMgI/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-teal-700 py-2 px-3 rounded-lg hover:bg-teal-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 2 Tailwind</a>
+                                <a href="https://docs.google.com/presentation/d/1M46fyDUQOtGl5aJ1xAbG_yHlfjFDtN769AQ92CQX4PM/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-teal-700 py-2 px-3 rounded-lg hover:bg-teal-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 3 Tailwind</a>
+                                <a href="https://docs.google.com/presentation/d/1PeafEcSN5mpt79-It9_JL3RFDicexQCEaIFm0BK46As/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-teal-700 py-2 px-3 rounded-lg hover:bg-teal-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 4 Tailwind</a>
+                                <a href="https://docs.google.com/presentation/d/1TPlbdiIIbNwG1TngAjGtBtXeN0XEM6bMu8mGTQ_BDlY/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-teal-700 py-2 px-3 rounded-lg hover:bg-teal-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 5 Tailwind</a>
+                                <a href="https://docs.google.com/presentation/d/1jHw6hsveHTgMh4fcBRIDZRvMiESd8TW1Z1r8u-7Pzzg/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-teal-700 py-2 px-3 rounded-lg hover:bg-teal-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 6 Tailwind</a>
+                                <a href="https://docs.google.com/presentation/d/1GpFsttKqXRTeOGJQrF6jOM9mh9V54yTz62EbSLd_P6g/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-teal-700 py-2 px-3 rounded-lg hover:bg-teal-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 7 Tailwind</a>
+                                <a href="https://docs.google.com/presentation/d/1mVWHwHhOBbLXVZj1oK_AFUpYldeFVKBKbQFrYAWnkOg/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-teal-700 py-2 px-3 rounded-lg hover:bg-teal-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 8 Tailwind</a>
+                                <a href="https://docs.google.com/presentation/d/182qMJCpoS6aSipjxmQq4osG2zUadIiax_Fx9Qcnj6xc/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-teal-700 py-2 px-3 rounded-lg hover:bg-teal-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 9 Tailwind</a>
+                                <a href="https://docs.google.com/presentation/d/1MLRgZh5Rbj-FI_vSXoZbrn4RsOwKw5mCD3XTH6C-KlM/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-sm text-slate-600 hover:text-teal-700 py-2 px-3 rounded-lg hover:bg-teal-50 transition-colors"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>TEMA 10 Tailwind</a>
+                            </div>
+                        </details>
+                        <a href="Tailwind/index.html" class="flex items-center justify-center gap-3 w-full py-3.5 px-4 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white font-semibold rounded-xl transition-all shadow-lg shadow-teal-500/40 hover:shadow-teal-600/50">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                            Ejercicios Resueltos
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16 py-8 text-center text-slate-500 text-sm border-t border-slate-200/60 max-w-7xl mx-auto">
+        <p>&copy; Desarrollo de Interfaces Web. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+# Scripts de automatización y herramientas
+*.ps1
+*.py
+
+# Archivos de datos generados o temporales
+*.json
+empty_folders.txt
+ListadoPresentaciones.txt
+errores.md
+*_extraido.txt
+
+# Archivos de sistema de Windows/macOS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos temporales de agentes IA u otros editores
+task.md*
+.vscode/

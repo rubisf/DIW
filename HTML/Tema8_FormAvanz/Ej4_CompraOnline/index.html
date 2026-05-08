@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Ecommerce</title>
+</head>
+<body>
+        <h2>Finalizar Compra</h2>
+    <form>
+        <fieldset>
+            <legend>Dirección de Envío</legend>
+            <label>Calle: <input type="text" required></label><br>
+            <!-- País de SOLO LECTURA autocompletado -->
+            <label>País: <input type="text" value="España" readonly></label>
+        </fieldset>
+        <fieldset>
+            <legend>Método de Pago</legend>
+            <label><input type="radio" name="pago" value="tarjeta" checked> Tarjeta de Crédito</label><br>
+            <label><input type="radio" name="pago" value="paypal"> PayPal</label>
+        </fieldset>
+        <fieldset>
+            <legend>Descuentos</legend>
+            <!-- Input deshabilitado por falta de promo -->
+            <label>Cupón: <input type="text" placeholder="PROMO20" disabled></label>
+        </fieldset>
+        <br>
+        <label>
+            <input type="checkbox" required> Acepto los <a href="#">términos y condiciones</a> de compra.
+        </label><br><br>
+        <input type="submit" value="Pagar ahora">
+    </form>
+</body>
+</html>

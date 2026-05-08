@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Tema 5 Ej 4: Grid Responsive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-indigo-950 text-white min-h-screen flex flex-col items-center justify-center p-6">
+
+    <div class="max-w-6xl w-full">
+        <header class="text-center mb-10">
+            <h1 class="text-3xl font-bold text-indigo-300">Layout de Grid Adaptativo</h1>
+            <p class="text-slate-400 mt-2">Observa cómo las columnas se reorganizan según el ancho del visor</p>
+        </header>
+
+        <!-- REQUISITO: Grid con 4 cajas y breakpoints específicos -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+            <!-- Caja 1 -->
+            <div
+                class="p-10 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl shadow-lg flex flex-col items-center justify-center border border-white/10">
+                <span class="text-4xl mb-2">💎</span>
+                <span class="font-bold text-xl text-white">Caja 1</span>
+            </div>
+
+            <!-- Caja 2 -->
+            <div
+                class="p-10 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl shadow-lg flex flex-col items-center justify-center border border-white/10">
+                <span class="text-4xl mb-2">🚀</span>
+                <span class="font-bold text-xl text-white">Caja 2</span>
+            </div>
+
+            <!-- Caja 3 -->
+            <div
+                class="p-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl shadow-lg flex flex-col items-center justify-center border border-white/10">
+                <span class="text-4xl mb-2">⚡</span>
+                <span class="font-bold text-xl text-white">Caja 3</span>
+            </div>
+
+            <!-- Caja 4 -->
+            <div
+                class="p-10 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl shadow-lg flex flex-col items-center justify-center border border-white/10">
+                <span class="text-4xl mb-2">🔥</span>
+                <span class="font-bold text-xl text-white">Caja 4</span>
+            </div>
+
+        </div>
+
+        <!-- Indicador visual de breakpoints -->
+        <div class="mt-12 text-center space-y-4">
+            <div
+                class="inline-flex gap-4 bg-indigo-900/40 p-1 rounded-full border border-indigo-500/20 text-xs px-4 py-2">
+                <span class="text-pink-400 block sm:hidden font-bold underlined">Móvil (1 col)</span>
+                <span class="text-sky-400 hidden sm:block lg:hidden font-bold">Tablet (2 cols)</span>
+                <span class="text-emerald-400 hidden lg:block font-bold">Escritorio (4 cols)</span>
+            </div>
+
+            <div class="flex justify-center gap-2 flex-wrap">
+                <code class="bg-indigo-800/50 px-2 py-1 rounded text-[10px] text-indigo-300">grid-cols-1</code>
+                <code class="bg-indigo-800/50 px-2 py-1 rounded text-[10px] text-indigo-300">sm:grid-cols-2</code>
+                <code class="bg-indigo-800/50 px-2 py-1 rounded text-[10px] text-indigo-300">lg:grid-cols-4</code>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

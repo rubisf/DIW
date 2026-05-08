@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 7 Ej 6: Mini Proyecto Animado</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #4f46e5;
+            --bg: #0f172a;
+            --text: #f8fafc;
+            --card-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* 1. LOADER DE CARGA INICIAL */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.1);
+            border-top: 5px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loaded #loader {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* 2. NAVBAR CON SUBRAYADO ANIMADO */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 10%;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* 3. BOTONES CON RIPPLE SIMULADO */
+        .btn-ripple {
+            position: relative;
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            overflow: hidden;
+            transition: background 0.3s;
+        }
+
+        .btn-ripple:hover {
+            background: var(--secondary);
+        }
+
+        .btn-ripple::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease, opacity 0.6s;
+            opacity: 0;
+        }
+
+        .btn-ripple:active::before {
+            width: 300px;
+            height: 300px;
+            opacity: 1;
+            transition: 0s;
+        }
+
+        /* 4. TARJETAS CON EFECTO 3D */
+        .container {
+            padding: 4rem 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .card-3d-wrap {
+            perspective: 1000px;
+        }
+
+        .card-3d {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .card-3d:hover {
+            transform: rotateY(10deg) rotateX(10deg) translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .card-3d h2 {
+            margin-bottom: 1rem;
+            transform: translateZ(50px);
+        }
+
+        .card-3d p {
+            opacity: 0.7;
+            margin-bottom: 2rem;
+            transform: translateZ(30px);
+        }
+
+        .card-3d .icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+            transform: translateZ(80px);
+        }
+
+        main {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .loaded main {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <nav>
+        <div class="logo">ANIMATE.JS</div>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Proyectos</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <button class="btn-ripple">Suscribirse</button>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="card-3d-wrap">
+                <div class="card-3d">
+                    <span class="icon">🚀</span>
+                    <h2>Velocidad</h2>
+                    <p>Interfaces rápidas y transiciones fluidas para una mejor experiencia.</p>
+                    <button class="btn-ripple">Ver más</button>
+                </div>
+            </div>
+            <div class="card-3d-wrap">
+                <div class="card-3d">
+                    <span class="icon">🎨</span>
+                    <h2>Diseño</h2>
+                    <p>Estética moderna con efectos avanzados de profundidad y luz.</p>
+                    <button class="btn-ripple">Ver más</button>
+                </div>
+            </div>
+            <div class="card-3d-wrap">
+                <div class="card-3d">
+                    <span class="icon">⚡</span>
+                    <h2>Rendimiento</h2>
+                    <p>Código optimizado para que tus animaciones no pesen nada.</p>
+                    <button class="btn-ripple">Ver más</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        window.addEventListener('load', () => {
+            // Simulamos un retraso para apreciar el loader
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 1500);
+        });
+    </script>
+</body>
+
+</html>

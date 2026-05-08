@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Tema 10 Ej 3: Botón Accesible</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 min-h-screen flex flex-col items-center justify-center p-8">
+
+    <div class="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-center">
+        <h1 class="text-2xl font-bold text-slate-800 mb-6">Estados de Botón en Tailwind</h1>
+
+        <div class="space-y-8">
+            <!-- BOTÓN ACTIVO -->
+            <div class="space-y-3">
+                <p class="text-sm font-medium text-slate-500 uppercase tracking-wider">Botón Interactivo</p>
+                <button class="
+                    px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg
+                    transition-all duration-200
+                    hover:bg-indigo-700 hover:shadow-lg
+                    focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-300
+                    active:scale-95
+                ">
+                    Enviar Formulario
+                </button>
+                <p class="text-xs text-slate-400 italic">Pasa el ratón (hover) o usa Tab (focus visible)</p>
+            </div>
+
+            <hr class="border-slate-100">
+
+            <!-- BOTÓN DISABLED -->
+            <div class="space-y-3">
+                <p class="text-sm font-medium text-slate-500 uppercase tracking-wider">Botón Deshabilitado</p>
+                <button disabled class="
+                    px-6 py-3 bg-slate-200 text-slate-400 font-semibold rounded-lg
+                    cursor-not-allowed
+                    opacity-70
+                ">
+                    Procesando...
+                </button>
+                <p class="text-xs text-slate-400 italic text-balance">Estado disabled: color apagado, sin hover y cursor
+                    de bloqueo.</p>
+            </div>
+        </div>
+
+        <div class="mt-10 p-4 bg-indigo-50 rounded-xl border border-indigo-100 text-left">
+            <h2 class="text-indigo-900 font-bold text-sm mb-2">Clases clave utilizadas:</h2>
+            <ul class="text-xs text-indigo-700 space-y-1 list-disc ml-4">
+                <li><code>hover:bg-indigo-700</code>: Cambio de color al pasar.</li>
+                <li><code>focus-visible:ring-4</code>: Anillo de accesibilidad para teclado.</li>
+                <li><code>disabled:opacity-70</code>: Feedback visual de inactividad.</li>
+                <li><code>cursor-not-allowed</code>: Cambio de puntero indicativo.</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

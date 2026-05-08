@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tema 7 Ej 5: Componente Avanzado Animado</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0fdf4;
+            /* Verde muy suave */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #166534;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+            font-size: 1.5rem;
+            color: #15803d;
+        }
+
+        /* COMPONENTE SOLICITADO */
+        .btn-avanzado {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            background-color: #22c55e;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+
+            /* Sombra inicial */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+            /* Transiciones suaves */
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            outline: none;
+        }
+
+        /* 1. HOVER ANIMADO + 5. SOMBRA ANIMADA */
+        .btn-avanzado:hover {
+            background-color: #16a34a;
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(34, 197, 94, 0.4), 0 10px 10px -5px rgba(34, 197, 94, 0.1);
+        }
+
+        /* 2. ACTIVE CON COMPRESIÓN (SCALE) */
+        .btn-avanzado:active {
+            transform: translateY(0) scale(0.92);
+            transition: all 0.1s ease;
+        }
+
+        /* 3. FOCUS ACCESIBLE */
+        .btn-avanzado:focus-visible {
+            box-shadow: 0 0 0 4px #bbf7d0, 0 20px 25px -5px rgba(34, 197, 94, 0.4);
+        }
+
+        /* 4. ICONO QUE SE DESPLACE SUAVEMENTE */
+        .icono {
+            font-size: 1.25rem;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-avanzado:hover .icono {
+            transform: translateX(8px);
+        }
+
+        /* Decoración extra (brillo al pasar) */
+        .btn-avanzado::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.3),
+                    transparent);
+            transition: all 0.6s ease;
+        }
+
+        .btn-avanzado:hover::after {
+            left: 100%;
+        }
+
+        .demo-container {
+            background: white;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .listado {
+            margin-top: 30px;
+            text-align: left;
+            font-size: 0.9rem;
+            color: #4b5563;
+        }
+
+        .listado li {
+            list-index-type: none;
+            margin-bottom: 5px;
+        }
+
+        .listado li::before {
+            content: '✔';
+            margin-right: 8px;
+            color: #22c55e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="demo-container">
+        <h1>Botón con Feedback Completo</h1>
+
+        <button class="btn-avanzado">
+            Explorar Destinos
+            <span class="icono">→</span>
+        </button>
+
+        <ul class="listado">
+            <li>Hover animado (Elevación y color)</li>
+            <li>Active con compresión (Escala 0.92)</li>
+            <li>Focus accesible (Anillo de enfoque)</li>
+            <li>Icono con desplazamiento horizontal</li>
+            <li>Sombra dinámica (Elevación y brillo)</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

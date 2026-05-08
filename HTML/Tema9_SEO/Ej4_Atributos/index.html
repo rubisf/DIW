@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos Globales y Custom</title>
+</head>
+<body>
+        <h1>Catálogo 2026</h1>
+    <!-- Uso de Atributos Custom (data-*) e ID/class -->
+    <div id="p1" class="producto" data-precio="39.99" data-stock="10">
+        <h2>Auriculares Bluetooth</h2>
+        <button onclick="alert('Precio: ' + this.parentElement.dataset.precio + 'â‚¬\nStock: ' + this.parentElement.dataset.stock)">Ver datos data-*</button>
+    </div>
+    <br>
+    
+    <!-- Oculto intencionalmente con HTML5 -->
+    <div hidden>
+        Secreto de estado: Esta caja no se procesa visualmente.
+    </div>
+    
+    <h3>Prueba de Content Editable</h3>
+    <p contenteditable="true" style="border:1px dashed blue; padding:5px;">
+        Haz clic aquí y escribe el texto que quieras directamente desde el navegador.
+    </p>
+</body>
+</html>

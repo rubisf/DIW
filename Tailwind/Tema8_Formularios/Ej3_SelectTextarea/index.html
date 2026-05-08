@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Tema 8 Ej 3: Select y Textarea</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 min-h-screen flex items-center justify-center p-6">
+
+    <div class="max-w-lg w-full bg-white rounded-3xl shadow-xl p-10 border border-slate-100">
+        <h1 class="text-3xl font-bold text-slate-800 mb-8 font-serif">Soporte y Consultas</h1>
+
+        <form action="#" class="space-y-6">
+
+            <!-- REQUISITO 1.1: Input de texto -->
+            <!-- REQUISITO 2: rounded, p-2, w-full -->
+            <div>
+                <label for="asunto" class="block text-sm font-semibold text-slate-600 mb-2">Asunto</label>
+                <input type="text" id="asunto" name="asunto" placeholder="¿Sobre qué quieres hablar?"
+                    class="rounded p-2 w-full border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all">
+            </div>
+
+            <!-- REQUISITO 1.2: Select con 3 opciones -->
+            <!-- REQUISITO 2: rounded, p-2, w-full -->
+            <div>
+                <label for="categoria" class="block text-sm font-semibold text-slate-600 mb-2">Categoría</label>
+                <select id="categoria" name="categoria"
+                    class="rounded p-2 w-full border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all bg-white">
+                    <option value="" disabled selected>Selecciona una opción...</option>
+                    <option value="tecnico">Asistencia Técnica</option>
+                    <option value="ventas">Departamento de Ventas</option>
+                    <option value="otros">Otras Consultas</option>
+                </select>
+            </div>
+
+            <!-- REQUISITO 1.3: Textarea con placeholder -->
+            <!-- REQUISITO 2: rounded, p-2, w-full -->
+            <div>
+                <label for="mensaje" class="block text-sm font-semibold text-slate-600 mb-2">Mensaje Detallado</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí tu consulta o comentario..."
+                    class="rounded p-2 w-full border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all resize-none"></textarea>
+            </div>
+
+            <button type="submit"
+                class="w-full bg-indigo-600 text-white font-bold py-3 rounded-xl hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-600/20 active:scale-[0.98]">
+                Enviar Consulta
+            </button>
+        </form>
+
+        <div class="mt-8 pt-6 border-t border-slate-100 flex justify-center gap-4">
+            <span class="text-xs font-medium text-slate-400">#TailwindForms</span>
+            <span class="text-xs font-medium text-slate-400">#UIComponents</span>
+        </div>
+    </div>
+
+</body>
+
+</html>

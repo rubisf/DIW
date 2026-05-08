@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TW T4 Ej1: Flex Box Céntrico</title>
+    <!-- Tailwind CSS (Play CDN para agilizar visualización directa) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: '#ff5733',
+              primary: '#1c64f2'
+            },
+            fontFamily: {
+                custom: ['Arial', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .card { @apply bg-white p-6 rounded-lg shadow-md; }
+        .btn { @apply bg-blue-500 text-white p-3 rounded hover:bg-blue-600 active:bg-blue-700 transition duration-300; }
+      }
+    </style>
+</head>
+<body class="bg-gray-50 p-6 flex flex-col gap-6">
+        <h1 class="text-xl mb-4 font-semibold text-center">Flexbox Centrado (Columna / Fila)</h1>
+    <div class="flex flex-col md:flex-row justify-center items-center gap-6 h-64 bg-slate-200 border-2 border-dashed border-slate-400 rounded-lg p-4">
+        <div class="bg-red-300 w-32 h-20 flex items-center justify-center font-bold shadow-md">Rojo</div>
+        <div class="bg-green-300 w-32 h-20 flex items-center justify-center font-bold shadow-md">Verde</div>
+        <div class="bg-blue-300 w-32 h-20 flex items-center justify-center font-bold shadow-md">Azul</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C_T3_Ej3: Margin Box</title>
+    <style>
+        body {{ font-family: system-ui, sans-serif; padding: 20px; background-color: #f8f9fa; color: #333; }}
+        .box { background: orange; padding: 20px; color: white; font-weight: bold; }
+.box1 { margin-bottom: 50px; }
+.box2 { margin-top: 30px; }
+.container { overflow: hidden; background-color: #f1f1f1; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <p>Con contenedor (overflow: hidden) para evitar colapso:</p>
+<div class="container">
+    <div class="box box1">Box 1 (mb: 50px)</div>
+</div>
+<div class="container">
+    <div class="box box2">Box 2 (mt: 30px)</div>
+</div>
+</body>
+</html>

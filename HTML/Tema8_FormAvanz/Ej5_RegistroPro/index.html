@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tema 8: Registro Profesional</title>
+    <!-- Estilos básicos para que el formulario sea presentable y fácil de probar -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        fieldset {
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+            color: #3498db;
+            font-size: 1.2rem;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            /* Incluye padding en el ancho */
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            display: inline;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        button[type="submit"] {
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #27ae60;
+        }
+
+        button[type="reset"] {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        button[type="reset"]:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Registro de Usuario Profesional</h1>
+
+        <!-- Formulario con validaciones nativas de HTML5 -->
+        <form action="#" method="POST">
+
+            <!-- 1. FIELDSET: Datos de Identificación -->
+            <fieldset>
+                <legend>Información de Identidad</legend>
+
+                <div class="form-group">
+                    <!-- label con 'for' vinculado al id del input -->
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required maxlength="50">
+                    <!-- Validación: Requerido y longitud máxima -->
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="usuario@empresa.com" required>
+                    <!-- Validación: Requerido y formato email -->
+                </div>
+
+                <div class="form-group">
+                    <label for="pass">Contraseña:</label>
+                    <input type="password" id="pass" name="pass" required pattern=".{8,}" title="Mínimo 8 caracteres">
+                    <!-- Validación: Requerido y patrón Regex (mín 8 chars) -->
+                </div>
+            </fieldset>
+
+            <!-- 2. FIELDSET: Perfil Profesional -->
+            <fieldset>
+                <legend>Perfil Profesional</legend>
+
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" min="18" max="99" required>
+                    <!-- Validación: Rango numérico (18-99) -->
+                </div>
+
+                <div class="form-group">
+                    <label>Género:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="gen-h" name="genero" value="hombre" required>
+                        <label for="gen-h">Hombre</label>
+
+                        <input type="radio" id="gen-m" name="genero" value="mujer">
+                        <label for="gen-m">Mujer</label>
+
+                        <input type="radio" id="gen-o" name="genero" value="otro">
+                        <label for="gen-o">Otro</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="sector">Sector de Trabajo:</label>
+                    <select id="sector" name="sector" required>
+                        <option value="">Selecciona una opción...</option>
+                        <option value="it">Tecnología e IT</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="design">Diseño</option>
+                        <option value="finance">Finanzas</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="bio">Biografía Profesional (resumen):</label>
+                    <textarea id="bio" name="bio" rows="4" maxlength="200"
+                        placeholder="Háblanos un poco de tu experiencia..."></textarea>
+                </div>
+            </fieldset>
+
+            <!-- 3. FIELDSET: Configuración y Consentimiento -->
+            <fieldset>
+                <legend>Preferencias y Aviso Legal</legend>
+
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Deseo recibir actualizaciones por correo.</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terminos" name="terminos" required>
+                        <label for="terminos">Acepto los términos y condiciones de servicio.</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Botones de acción -->
+            <div class="btn-container">
+                <button type="reset">Limpiar Formulario</button>
+                <button type="submit">Registrar Ahora</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

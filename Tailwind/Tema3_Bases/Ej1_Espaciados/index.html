@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TW T3 Ej1: Clases Espaciado</title>
+    <!-- Tailwind CSS (Play CDN para agilizar visualización directa) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: '#ff5733',
+              primary: '#1c64f2'
+            },
+            fontFamily: {
+                custom: ['Arial', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .card { @apply bg-white p-6 rounded-lg shadow-md; }
+        .btn { @apply bg-blue-500 text-white p-3 rounded hover:bg-blue-600 active:bg-blue-700 transition duration-300; }
+      }
+    </style>
+</head>
+<body class="bg-gray-50 p-6 flex flex-col gap-6">
+        <div class="bg-red-200 p-6 rounded-lg shadow-md text-center text-lg font-bold w-1/2 mx-auto">
+        1. bg-red-200 (Fondo rojo)<br>
+        2. p-6 (Padding)<br>
+        3. rounded-lg (Bordes redondeados)<br>
+        4. text-center (Centrado)<br>
+        5. font-bold (Negrita)
+    </div>
+</body>
+</html>

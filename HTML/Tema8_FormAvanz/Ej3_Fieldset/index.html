@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fieldset y Legend</title>
+</head>
+<body>
+        <h2>Inscripción Universitaria</h2>
+    <form>
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label>Nombre: <input type="text" required></label><br>
+            <label>DNI: <input type="text" required></label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Datos Académicos</legend>
+            <label>Titulación de acceso: <input type="text"></label><br>
+            <label>Nota media: <input type="number" step="0.1" min="5" max="10"></label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Preferencias</legend>
+            <label><input type="radio" name="turno" value="manana"> Mañana</label>
+            <label><input type="radio" name="turno" value="tarde"> Tarde</label>
+        </fieldset>
+        
+        <br>
+        <button type="submit">Matricularse</button>
+    </form>
+</body>
+</html>

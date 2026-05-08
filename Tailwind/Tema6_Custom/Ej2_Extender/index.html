@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TW T6 Ej2: Extender Tema Base</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: '#ff5733', 
+              primary: '#1c64f2',
+              secondary: '#10b981'
+            },
+            fontFamily: {
+                custom: ['Georgia', 'serif']
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .card { @apply bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300; }
+        .btn { @apply bg-blue-500 text-white p-3 rounded hover:bg-blue-600 active:bg-blue-700 transition duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300; }
+      }
+    </style>
+</head>
+<body class="bg-gray-50 p-6 flex flex-col gap-6 dark:bg-gray-900 transition-colors duration-300">
+        <h1 class="text-xl mb-4 font-semibold text-center text-gray-800">Atributos Extendidos en config</h1>
+    <div class="bg-brand text-white font-custom p-8 rounded-xl shadow-[0_10px_0_rgba(200,50,20,1)] text-center text-2xl">
+        Color Customizado (Brand #ff5733) y Fuente Extendida
+    </div>
+</body>
+</html>

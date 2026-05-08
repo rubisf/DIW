@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Ej7: Z-Index (Cajas Superpuestas)</title>
+    <style>
+        /* CSS Reset Básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: #f1f5f9;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        h1 {
+            color: #0f172a;
+            font-size: 1.8rem;
+        }
+
+        .instrucciones {
+            background-color: #fff;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            max-width: 500px;
+            text-align: center;
+            color: #475569;
+        }
+
+        /* CONTEXTO DE APILAMIENTO (Stacking Context) */
+        .contenedor-relativo {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: #e2e8f0;
+            border-radius: 12px;
+            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+            /* Estableciendo margen para demostrar el absolute sobre este padre relativo */
+            border: 2px dashed #cbd5e1;
+        }
+
+        /* CAJAS COMUNES */
+        .caja {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.25rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: z-index 0.3s ease, transform 0.3s ease;
+        }
+
+        /* CAJA A (Abajo/Izquierda por defecto) */
+        .caja-a {
+            background-color: #ef4444;
+            /* Rojo */
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+        }
+
+        /* CAJA B (Arriba/Derecha por defecto) */
+        .caja-b {
+            background-color: #3b82f6;
+            /* Azul */
+            bottom: 20px;
+            right: 20px;
+            z-index: 20;
+        }
+
+        /* HOVER INTERACTIONS: La magia del Z-Index dinámico */
+
+        /* Al hacer hover en la caja A, subimos su z-index radicalmente para que solape a la B */
+        .caja-a:hover {
+            z-index: 50;
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        /* Al hacer hover en B, le damos aún más z-index (o la mantenemos superior por seguridad visual) */
+        .caja-b:hover {
+            z-index: 60;
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        .controles input {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="instrucciones">
+        <h1>Z-Index Hover dinámico</h1>
+        <p>Por defecto la <strong>Caja Azul</strong> está programada para verse por encima (Z-Index: 20). Pasa el ratón
+            por encima de la <strong>Caja Roja</strong> (Z-index: 10) para subirla a la superficie dinámicamente.</p>
+    </div>
+
+    <div class="contenedor-relativo">
+        <div class="caja caja-a">Caja A</div>
+        <div class="caja caja-b">Caja B</div>
+    </div>
+
+</body>
+
+</html>

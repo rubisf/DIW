@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Tema 1 Ej 3: ¿Bootstrap o Tailwind?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap');
+
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-900 text-white min-h-screen flex items-center justify-center p-6">
+
+    <div class="max-w-2xl w-full bg-slate-800 rounded-3xl p-10 shadow-2xl border border-slate-700">
+        <header class="mb-8 border-b border-slate-700 pb-6">
+            <h1 class="text-3xl font-bold bg-gradient-to-r from-sky-400 to-indigo-400 bg-clip-text text-transparent">
+                Ejercicio 3: Elección de Framework
+            </h1>
+            <p class="text-slate-400 mt-2">¿Qué herramienta elegirías para un diseño 100% único?</p>
+        </header>
+
+        <section class="space-y-6">
+            <div class="bg-slate-700/50 p-6 rounded-2xl border border-slate-600">
+                <p class="text-lg leading-relaxed italic text-slate-200">
+                    "Imagina que quieres crear una web con colores personalizados, diseño propio y sin que se parezca a
+                    otras webs..."
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- OPCION BOOTSTRAP -->
+                <div class="p-6 rounded-xl border-2 border-slate-600 flex items-center gap-4 opacity-50 grayscale">
+                    <div class="w-6 h-6 rounded-full border-2 border-slate-500"></div>
+                    <span class="text-xl font-semibold">Bootstrap</span>
+                </div>
+
+                <!-- OPCION TAILWIND (CORRECTA) -->
+                <div
+                    class="p-6 rounded-xl border-2 border-sky-500 bg-sky-500/10 flex items-center gap-4 shadow-[0_0_20px_rgba(14,165,233,0.2)]">
+                    <div
+                        class="w-6 h-6 rounded-full border-2 border-sky-500 bg-sky-500 flex items-center justify-center">
+                        <svg class="w-4 h-4 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold text-sky-400">Tailwind CSS</span>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-indigo-500/10 p-8 rounded-2xl border border-indigo-500/30">
+                <h2 class="text-indigo-300 font-bold text-xl mb-4 flex items-center gap-2">
+                    <span class="text-2xl">💡</span> Por qué Tailwind CSS:
+                </h2>
+                <ul class="space-y-4 text-slate-300">
+                    <li class="flex gap-3">
+                        <span class="text-indigo-400 font-bold">1.</span>
+                        <span><strong>Sin componentes pre-diseñados:</strong> A diferencia de Bootstrap, que impone
+                            botones y cards con estilos fijos, Tailwind te da "utilidades" (piezas de LEGO) para
+                            construirlo todo desde cero.</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="text-indigo-400 font-bold">2.</span>
+                        <span><strong>Libertad Total:</strong> Permite implementar cualquier sistema de diseño (colores,
+                            sombras, espaciados) directamente en el HTML sin sobreescribir CSS complejo.</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="text-indigo-400 font-bold">3.</span>
+                        <span><strong>Identidad Única:</strong> Evita el "efecto Bootstrap" donde miles de webs se ven
+                            iguales. Con Tailwind, el límite es tu imaginación.</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="mt-10 text-center text-slate-500 text-sm">
+            Diseño e Implementación con Tailwind CSS Moderno
+        </footer>
+    </div>
+
+</body>
+
+</html>

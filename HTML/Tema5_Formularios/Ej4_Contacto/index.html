@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto Completo</title>
+</head>
+<body>
+        <h2>Formulario Contacto</h2>
+    <form action="#" method="POST">
+        <label for="nombres">Nombre y Apellidos:</label><br>
+        <input type="text" id="nombres" name="nombres" required><br><br>
+        
+        <label for="correo">Email de contacto:</label><br>
+        <input type="email" id="correo" name="correo" required><br><br>
+        
+        <label for="pais">País de residencia:</label><br>
+        <select id="pais" name="pais">
+            <option value="es">España</option>
+            <option value="mx">México</option>
+            <option value="ar">Argentina</option>
+            <option value="co">Colombia</option>
+        </select><br><br>
+        
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="5" cols="40" required placeholder="Escribe aquí tu consulta..."></textarea><br><br>
+        
+        <button type="submit">Enviar Mensaje</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tema 5 Ej 4: Align Items (Alineación Vertical)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            padding: 40px;
+            color: #334155;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: #2563eb;
+        }
+
+        .demo-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .flex-wrapper {
+            background-color: #e2e8f0;
+            padding: 15px;
+            border-radius: 12px;
+            display: flex;
+            min-height: 200px;
+            /* Para apreciar la alineación vertical */
+            border: 2px dashed #94a3b8;
+            flex-grow: 1;
+        }
+
+        /* CLASES DE ALINEACIÓN */
+        .align-center {
+            align-items: center;
+        }
+
+        .align-end {
+            align-items: flex-end;
+        }
+
+        .caja {
+            background-color: #f97316;
+            /* Orange */
+            width: 60px;
+            height: 60px;
+            /* Altura base */
+            margin: 5px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* MODIFICACIÓN SOLICITADA: Una más alta */
+        .caja.taller {
+            height: 120px;
+            background-color: #ea580c;
+        }
+
+        .label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+            color: #475569;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        code {
+            background: #cbd5e1;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Ejercicio 4: Align Items</h1>
+    <p>Comparativa de alineación vertical en el eje secundario (cross axis).</p>
+
+    <div class="demo-container">
+        <!-- Caso 1: Center -->
+        <section>
+            <span class="label">align-items: center</span>
+            <div class="flex-wrapper align-center">
+                <div class="caja">1</div>
+                <div class="caja taller">2 (Alta)</div>
+                <div class="caja">3</div>
+            </div>
+        </section>
+
+        <!-- Caso 2: Flex-end -->
+        <section>
+            <span class="label">align-items: flex-end</span>
+            <div class="flex-wrapper align-end">
+                <div class="caja">1</div>
+                <div class="caja taller">2 (Alta)</div>
+                <div class="caja">3</div>
+            </div>
+        </section>
+    </div>
+
+    <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+        <strong>Observación:</strong>
+        <p>Al tener elementos de <strong>distintas alturas</strong>, <code>align-items</code> permite controlar cómo se
+            posicionan respecto al espacio disponible en el eje vertical:</p>
+        <ul>
+            <li><code>center</code>: Los elementos se alinean por su centro vertical.</li>
+            <li><code>flex-end</code>: Los elementos se "apoyan" en la parte inferior del contenedor.</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

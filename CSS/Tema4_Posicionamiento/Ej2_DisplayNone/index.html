@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Ej2: Display None</title>
+    <style>
+        /* CSS Reset Básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contenedor {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #1e293b;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+
+        p {
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            border: 2px solid transparent;
+        }
+
+        .parrafo-visible {
+            background-color: #dbeafe;
+            color: #1e40af;
+            border-color: #93c5fd;
+        }
+
+        .parrafo-oculto {
+            background-color: #fef08a;
+            color: #854d0e;
+            border-color: #fde047;
+
+            /* PROPIEDAD CLAVE: Oculta el elemento del DOM visualmente y de accesibilidad */
+            display: none;
+        }
+
+        .instruccion {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #64748b;
+            text-align: left;
+            background: #f1f5f9;
+            padding: 1rem;
+            border-radius: 6px;
+        }
+
+        .instruccion code {
+            background: #e2e8f0;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #334155;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <h1>Ejercicio de Display</h1>
+
+        <p class="parrafo-visible">
+            Este es un párrafo completamente <strong>visible</strong>. Se renderiza con normalidad en el flujo del
+            documento.
+        </p>
+
+        <p class="parrafo-oculto">
+            Este es el párrafo <strong>oculto</strong>. Si puedes leer esto sin usar DevTools, significa que has
+            conseguido quitar el <code>display: none</code> con éxito. ¡Buen trabajo!
+        </p>
+
+        <div class="instruccion">
+            <p><strong>Inspecciona la página:</strong></p>
+            <ol>
+                <li>Click derecho en cualquier parte y "Inspeccionar" (o F12).</li>
+                <li>Busca la etiqueta <code>&lt;p class="parrafo-oculto"&gt;</code> en la pestaña Elements/Elementos.
+                </li>
+                <li>Desmarca la casilla <code>display: none;</code> en la pestaña de Estilos de las DevTools para
+                    revelar el párrafo secreto.</li>
+            </ol>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TW T10 Ej2: Contraste y Estados</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: '#ff5733', 
+              primary: '#1c64f2',
+              secondary: '#10b981'
+            },
+            fontFamily: {
+                custom: ['Georgia', 'serif']
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .card { @apply bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300; }
+        .btn { @apply bg-blue-500 text-white p-3 rounded hover:bg-blue-600 active:bg-blue-700 transition duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300; }
+      }
+    </style>
+</head>
+<body class="bg-gray-50 p-6 flex flex-col gap-6 dark:bg-gray-900 transition-colors duration-300">
+        <div class="grid grid-cols-2 gap-8 max-w-4xl mx-auto mt-10">
+        <div class="bg-white border p-8 rounded-lg">
+            <h2 class="text-gray-300 font-bold mb-4 font-mono"># EJEMPLO POBRE #</h2>
+            <p class="text-gray-400 text-sm">Este texto gris sobre blanco es difícil de leer. El botón que sigue no es indicativo de su estado real.</p>
+            <button class="mt-4 text-white bg-blue-300 p-2 rounded cursor-pointer">Enviar Indeterminado</button>
+        </div>
+
+        <div class="bg-white shadow-lg p-8 rounded-lg border-l-4 border-green-500">
+            <h2 class="text-gray-900 font-extrabold mb-4 font-mono"># EJEMPLO ACCESIBLE #</h2>
+            <p class="text-gray-700 leading-relaxed mb-6">Texto altamente contrastado y espaciado orgánico. El estado deshabilitado del botón es explícito en opacidad y cursos de ratón.</p>
+            <button class="mt-auto bg-green-600 text-white font-bold p-3 rounded shadow hover:bg-green-700 active:bg-green-800 disabled:opacity-50 disabled:cursor-not-allowed w-full focus:ring-4 focus:ring-green-300" disabled>Cargando datos...</button>
+        </div>
+    </div>
+</body>
+</html>
